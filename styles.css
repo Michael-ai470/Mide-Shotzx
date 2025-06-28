@@ -604,6 +604,8 @@ body.light-mode,
 
 .light-mode .contact-section h3 {
   color: #181818 !important;
+}.light-mode .contact-section a {
+  color: #181818 !important;
 }
 
 .light-mode .portfolio-hero {
