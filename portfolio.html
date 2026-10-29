@@ -1,197 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mide Shotzx</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Mide Shotzx</title>
+  <meta name="description" content="Portraits, couples, family, editorial and heritage photography by Mide Shotzx, a photography and film studio in Akure, Nigeria.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/portfolio.html">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="Portfolio — Mide Shotzx">
+  <meta property="og:description" content="Portraits, couples, family, editorial and heritage photography by Mide Shotzx, a photography and film studio in Akure, Nigeria.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/portfolio.html">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/portfolio.js"></script>
 </head>
 <body>
-   <section class="navigation">
-        <nav class="navbar">
-            <div class="logo">Mide Shotzx</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul> 
-            <div class="toggle-theme mobile-toggle-theme">
-                <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button class="theme-btn light-btn" aria-label="Light mode">
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div> 
-            <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>                                                                                                                                    
-         </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html" aria-current="page">Work</a>
+          <a href="gallery.html">Films</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About</a>
+          <a href="contact-us.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="portfolio.html" aria-current="page"><span>02</span>Work</a>
+      <a href="gallery.html"><span>03</span>Films</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="about-us.html"><span>05</span>About</a>
+      <a href="contact-us.html"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="page-head" data-hero>
+      <div class="container">
+        <div class="page-head-grid">
+          <div>
+            <p class="eyebrow" data-hero-part="fade" data-motion-hide>Portfolio &middot; 56 frames</p>
+            <h1 class="page-title" data-hero-part="words" data-motion-hide>The <em>work.</em></h1>
+          </div>
+          <p class="lead" data-hero-part="focus" data-motion-hide>A selection from recent sessions: studio portraits, love stories, families, streetwear editorials and the culture we wear. Tap any frame to see it full size.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter by category" data-hero-part="pop" data-motion-hide style="margin-top:clamp(40px,5vw,64px)">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All <sup>56</sup></button>
+          <button class="chip" type="button" data-filter="portraits" aria-pressed="false">Portraits <sup>11</sup></button>
+          <button class="chip" type="button" data-filter="studio" aria-pressed="false">Studio <sup>4</sup></button>
+          <button class="chip" type="button" data-filter="couples" aria-pressed="false">Couples <sup>9</sup></button>
+          <button class="chip" type="button" data-filter="family" aria-pressed="false">Family <sup>3</sup></button>
+          <button class="chip" type="button" data-filter="editorial" aria-pressed="false">Editorial <sup>18</sup></button>
+          <button class="chip" type="button" data-filter="heritage" aria-pressed="false">Heritage <sup>11</sup></button>
+        </div>
+      </div>
     </section>
 
-    <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
-        </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="work-grid" data-grid>
+          <figure class="tile is-wide" data-cat="heritage" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-43.jpg" data-cat="Heritage" aria-label="View larger: Smiling woman in an orange gele and coral beads">
+              <img src="images/work/work-43.jpg" srcset="images/work/work-43-640.webp 640w, images/work/work-43-1280.webp 1280w, images/work/work-43.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBQCdASoPABQAPt1apkyopSOiMAgBEBuJbACdMoR3IsChAAMyYUhmV9a7jj16HODgAP7qNVLL5L0UZYETOM7fGUDo9RnPztTGoqnrxWRAe6oMoSuXobOXhiQaSQyehdxOrvwb37Vx6cg6PUiI4DQ9rwTX+8fNR+pshpTp6jx409gGdrMGYAAA)" alt="Smiling woman in an orange gele and coral beads" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 43</span></span>
             </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-38.jpg" data-cat="Couples" aria-label="View larger: Woman in a beanie hugging her partner from behind on a basketball court">
+              <img src="images/work/work-38.jpg" srcset="images/work/work-38-640.webp 640w, images/work/work-38-1280.webp 1280w, images/work/work-38.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOgA7DTrE4LVesAAP7lqYiP8ZUfCuBfe/hG1VjyJ9+d5I9ZAHtgFHTipGeszsFA4aWvy6LKiyr6/gbdDPI27e8StwPDCh9bRmKsWcGz7UH7DoOZgAAA)" alt="Woman in a beanie hugging her partner from behind on a basketball court" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 38</span></span>
             </button>
+          </figure>
+          <figure class="tile" data-cat="studio" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-34.jpg" data-cat="Studio" aria-label="View larger: Woman in a black square-neck top posing against a brown studio backdrop">
+              <img src="images/work/work-34.jpg" srcset="images/work/work-34-640.webp 640w, images/work/work-34-1280.webp 1280w, images/work/work-34.jpg 2160w" width="2160" height="2882" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAwCdASoPABQAPt1apkyopSOiMAgBEBuJTIIIwsQAQFgAAP7v6SIOSlPSeq6gPIx+LhyCrO+Gi08U6Pf9Agi0dL30o9NH3ZK15asNAAA=)" alt="Woman in a black square-neck top posing against a brown studio backdrop" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Studio</span><span>No. 34</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-51.jpg" data-cat="Editorial" aria-label="View larger: Woman in a patterned beanie adjusting her glasses">
+              <img src="images/work/work-51.jpg" srcset="images/work/work-51-640.webp 640w, images/work/work-51-1280.webp 1280w, images/work/work-51.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJQBadBDvtZ0CgBMBuq4/boAD+8rsLgMBZksIG5R/UFXioGhdURwM4KbMudRWBHbXh+cW7ZV8WTfOpiR7jdttStPfEZPo125w0nYMtzqptfLwA)" alt="Woman in a patterned beanie adjusting her glasses" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 51</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-44.jpg" data-cat="Heritage" aria-label="View larger: Woman in an orange gele and coral beads in front of a car">
+              <img src="images/work/work-44.jpg" srcset="images/work/work-44-640.webp 640w, images/work/work-44-1280.webp 1280w, images/work/work-44.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBQCdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoLUCi/90AAj8+eLbv1I1MXfLQIAAP37b3GbgVFg3osuwWqOvBRWSbMqgfsTQeEUHWRnuhvKZBhHZlgz3wyl/xluAFOgL+g9nSIOgm0itiBDUETVRd2saaAYAAA=)" alt="Woman in an orange gele and coral beads in front of a car" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 44</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-40.jpg" data-cat="Couples" aria-label="View larger: Couple standing back to back, her long braids draped over his shoulder">
+              <img src="images/work/work-40.jpg" srcset="images/work/work-40-640.webp 640w, images/work/work-40-1280.webp 1280w, images/work/work-40.jpg 2272w" width="2272" height="3028" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBdgA9H1lw5kRHQWAAD+6iDIdap5t490XhMg+fy7ia9mvI5jRlJS795NGjBMenyMHna376jJF9kWIzxS6qDH97Y/kvIXSeeAAA==)" alt="Couple standing back to back, her long braids draped over his shoulder" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 40</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="studio" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-35.jpg" data-cat="Studio" aria-label="View larger: Graduate seated in an armchair wearing a cap, hood and Class of 2025 stole">
+              <img src="images/work/work-35.jpg" srcset="images/work/work-35-640.webp 640w, images/work/work-35-1280.webp 1280w, images/work/work-35.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJZACdMoMggEmiy/v3Jwh/qJJQAP7ljXWjsp1dXdVujszpWLQzIt2Qiu/QXm93Rc7hRfcqwGpzv62YqAXEDTfWEUB2i0yPWxtip21iQAAAAA==)" alt="Graduate seated in an armchair wearing a cap, hood and Class of 2025 stole" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Studio</span><span>No. 35</span></span>
+            </button>
+          </figure>
+          <figure class="tile is-wide" data-cat="editorial" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-53.jpg" data-cat="Editorial" aria-label="View larger: Woman in a graphic tee with arms crossed against a weathered wall">
+              <img src="images/work/work-53.jpg" srcset="images/work/work-53-640.webp 640w, images/work/work-53-1280.webp 1280w, images/work/work-53.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoPABQAPt1cp0yopSOiMAgBEBuJZwAAVUcfDjCMRCDe0g/Q+gAA/vQyxpnmO4UlHo9DfBPIdRIx/3l2psFNO/WVOJaUf3zIb9EWlexcTJjlm0iJYoPqDjYDKpbezSgA)" alt="Woman in a graphic tee with arms crossed against a weathered wall" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 53</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-45.jpg" data-cat="Heritage" aria-label="View larger: Full-length portrait of a smiling woman in gele and sequinned lace">
+              <img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==)" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 45</span></span>
+            </button>
+          </figure>
+          <figure class="tile is-wide" data-cat="couples" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-39.jpg" data-cat="Couples" aria-label="View larger: Couple facing each other on a sunlit basketball court">
+              <img src="images/work/work-39.jpg" srcset="images/work/work-39-640.webp 640w, images/work/work-39-1280.webp 1280w, images/work/work-39.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBYdgwCZmngkW9/sSUAA/uaK6zPGdFTZdldmeOG6M5dSojaaqhOyD6RjR2GlmcsXws0eF2TYbSCO7+AKICltDa+l0d1lVWsvU3oUAAA=)" alt="Couple facing each other on a sunlit basketball court" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 39</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-52.jpg" data-cat="Editorial" aria-label="View larger: Sepia portrait of a woman in a beanie and glasses">
+              <img src="images/work/work-52.jpg" srcset="images/work/work-52-640.webp 640w, images/work/work-52-1280.webp 1280w, images/work/work-52.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoPABQAPt1ep00opSOiMAgBEBuJZwCdACHgU3gryCJFmVzgAP7r3ch91+8GB6wtVM0P+jztTAdgxKkrbSKZ3Ifhk2NAAA==)" alt="Sepia portrait of a woman in a beanie and glasses" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 52</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="studio" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-36.jpg" data-cat="Studio" aria-label="View larger: Graduate in cap and hood holding a Class of 2025 stole in the studio">
+              <img src="images/work/work-36.jpg" srcset="images/work/work-36-640.webp 640w, images/work/work-36-1280.webp 1280w, images/work/work-36.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoPABQAPt1apkyopSOiMAgBEBuJYgCdACIKHRDg9ANnWfgA/uyvzvx1UbQDnkxQrKKNGGd58nMOA/35jZE+qSBU/MJkThquXHj0AAAA)" alt="Graduate in cap and hood holding a Class of 2025 stole in the studio" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Studio</span><span>No. 36</span></span>
+            </button>
+          </figure>
+          <figure class="tile is-wide" data-cat="heritage" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-47.jpg" data-cat="Heritage" aria-label="View larger: Black-and-white close-up of a woman's eyes reflected in a hand mirror">
+              <img src="images/work/work-47.jpg" srcset="images/work/work-47-640.webp 640w, images/work/work-47-1280.webp 1280w, images/work/work-47.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoPABQAPt1cpkyopSOiMAgBEBuJaQAOcAPIyk+eR8omNVNVFiwA1s+WsPfWyMMAc1RJUkR7lSi7nYmr0809U2YSyzWZlIcTTmuAr8OpLCyqT9x5b/1hT0f0kAAAAA==)" alt="Black-and-white close-up of a woman's eyes reflected in a hand mirror" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 47</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-41.jpg" data-cat="Couples" aria-label="View larger: Woman smiling down at her partner as he lies with his head on a basketball">
+              <img src="images/work/work-41.jpg" srcset="images/work/work-41-640.webp 640w, images/work/work-41-1280.webp 1280w, images/work/work-41.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBYdgeqwsh/XTebAAP7o+DLEFkoMRRkzYoCgmv/m+8unVjyKIAwqSX7vx3RI72yIWW0l0NEGiHFrmoRDywaqLW5C6gBrzRjqIOR0+rMTWjHzZOp8n9U6gr5Q5QAA)" alt="Woman smiling down at her partner as he lies with his head on a basketball" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 41</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-54.jpg" data-cat="Editorial" aria-label="View larger: Woman in sunglasses and a beanie making rock hand signs against a red wall">
+              <img src="images/work/work-54.jpg" srcset="images/work/work-54-640.webp 640w, images/work/work-54-1280.webp 1280w, images/work/work-54.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJYgC7MoMYAEiZnrmLC899LA3AAP7sEQBqirr8q68or3DAIAu3CyDyJ45UA7wutCfk92fK1s9ZAKDYAUNyB6X2n17AoLXencjVBhJD8UpzimXj1IgylAKGQYoAAA==)" alt="Woman in sunglasses and a beanie making rock hand signs against a red wall" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 54</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-46.jpg" data-cat="Heritage" aria-label="View larger: Woman in a gele leaning on a concrete pillar">
+              <img src="images/work/work-46.jpg" srcset="images/work/work-46-640.webp 640w, images/work/work-46-1280.webp 1280w, images/work/work-46.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJYgCw7CBtuY/dWW0mJeopoAD+6jCoBlP9AMcraN0LeLIp2V57qZ0aS5bX7nigDr6wK52HaFiK27ZZmCp7ofcc0dUaiKuegpp1Dr3m6bnsPOoNRkAAAA==)" alt="Woman in a gele leaning on a concrete pillar" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 46</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-49.jpg" data-cat="Heritage" aria-label="View larger: Hands crossed over sequinned lace, coral bead bracelets on the wrist">
+              <img src="images/work/work-49.jpg" srcset="images/work/work-49-640.webp 640w, images/work/work-49-1280.webp 1280w, images/work/work-49.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoRwACRg6/mc1nBA7NAA/j+wBbt5hYY3KHSlVBUM24TT8KTZ3jlqU1kg+zl38SegZREqeLqpAyWRGJi1yBfNVdSMZ0CK3TTEQ2AAAA==)" alt="Hands crossed over sequinned lace, coral bead bracelets on the wrist" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 49</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-42.jpg" data-cat="Couples" aria-label="View larger: Woman in a beanie and glasses holding a basketball on the court">
+              <img src="images/work/work-42.jpg" srcset="images/work/work-42-640.webp 640w, images/work/work-42-1280.webp 1280w, images/work/work-42.jpg 2160w" width="2160" height="2878" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOgA4YWqzYIowr2FlIAAP7mZ8fdx0tnsM8wpWEmXGXA6wgMaZaiXKZvk45065Z5NwQKdHPWdlwvAWFwPy+jgeVHHq7ozCNdaPbuc+ZCBFAA)" alt="Woman in a beanie and glasses holding a basketball on the court" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 42</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-55.jpg" data-cat="Editorial" aria-label="View larger: Woman in glasses and a graphic tee posing at dusk">
+              <img src="images/work/work-55.jpg" srcset="images/work/work-55-640.webp 640w, images/work/work-55-1280.webp 1280w, images/work/work-55.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJZQCw7CIjCH9Cp/2zR4x/xhwA/u9OozNtUNgfvu8w8q48fVsmftBXzcuEPub+SvQlTas6UbeQ0ZnSw2+/HS3CH9rurBNVBmOu5PeoW2+9pWUDwiMipgAA)" alt="Woman in glasses and a graphic tee posing at dusk" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 55</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-48.jpg" data-cat="Heritage" aria-label="View larger: Woman in a gele and sequinned lace standing barefoot behind iron railings">
+              <img src="images/work/work-48.jpg" srcset="images/work/work-48-640.webp 640w, images/work/work-48-1280.webp 1280w, images/work/work-48.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoRwACf/3YGL9Z/ltY2c1gD+g8FEFOVMTIctzNOa6G5GlGMjCfGKCg001CjWW4/uRFqyfM6sBf4b7IVPk0esk9LGTah5VtV+4TqyB+bYhQhlQAAA)" alt="Woman in a gele and sequinned lace standing barefoot behind iron railings" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 48</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="studio" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-37.jpg" data-cat="Studio" aria-label="View larger: Laughing graduate in gown and cap waving, tassel in hand">
+              <img src="images/work/work-37.jpg" srcset="images/work/work-37-640.webp 640w, images/work/work-37-1280.webp 1280w, images/work/work-37.jpg 2160w" width="2160" height="2882" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOmUACNMS0RqAD+8Af1oKqm1znhQIZA3yJQZwy9EWdD6QocgvrMeRj+mEyRKNqAAA==)" alt="Laughing graduate in gown and cap waving, tassel in hand" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Studio</span><span>No. 37</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-50.jpg" data-cat="Heritage" aria-label="View larger: Woman in a gele holding a traditional fly whisk in front of a brick wall">
+              <img src="images/work/work-50.jpg" srcset="images/work/work-50-640.webp 640w, images/work/work-50-1280.webp 1280w, images/work/work-50.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoPABQAPt1apkyopSOiMAgBEBuJbACdACP6zhC7lPVm/L3cLfWAAPdOeWm5SUkr59PHJVbgirbUXH4dTXkzYsOheuAvBh2J5OaWdS3w1L5pOla/tPeOnAp77K09/UTpV8yeeSEWTfrUdjvfA0n56W/2YiEcAAAA)" alt="Woman in a gele holding a traditional fly whisk in front of a brick wall" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 50</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-56.jpg" data-cat="Editorial" aria-label="View larger: Woman in sunglasses holding her beanie against a red wall">
+              <img src="images/work/work-56.jpg" srcset="images/work/work-56-640.webp 640w, images/work/work-56-1280.webp 1280w, images/work/work-56.jpg 2160w" width="2160" height="2882" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoPABQAPt1apkyopSOiMAgBEBuJZACsLwJN/AmPMiqeykVXH/eDwAD+4zIs6Gd4fdtFmG2l+wxkqC4njtgjqBpu9pnCY+nI1js0RKFvPcAwrVzjlg3pxgax0PZUFUXdRSYAYFCOFMUAAA==)" alt="Woman in sunglasses holding her beanie against a red wall" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 56</span></span>
+            </button>
+          </figure>
+          <figure class="tile is-wide" data-cat="portraits" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-03.jpg" data-cat="Portraits" aria-label="View larger: Woman in a floral dress raising one arm against tropical trees">
+              <img src="images/work/work-03.jpg" srcset="images/work/work-03-480.webp 480w, images/work/work-03.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJaACdMoQL+BHXvCqYuTbE9dyAAP3a40Xj8ilLeXbKvh8tLIoEQMHbcP/ri4HiQ3B6NMWOgGcR7qObX+POyl1BO5PmXixD+E8a9ffooc9N9BR8sA8BwX4XHEC5YL9+oDNpHK7EB92tzcKsccAAAA==)" alt="Woman in a floral dress raising one arm against tropical trees" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 03</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-25.jpg" data-cat="Couples" aria-label="View larger: Couple sitting under a parasol, she in a red dress">
+              <img src="images/work/work-25.jpg" srcset="images/work/work-25-480.webp 480w, images/work/work-25.jpg 1056w" width="1056" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoQABQAPt1apkyopSOiMAgBEBuJbACdMoR4GChufjGpML7Z7c1gAP6104x/TpcqvqMyyXRbTTy0MSi+aSBkhXQ+FUlkqe2tWFZuoWu4kl7ykc5sQyuNHE3UTrrqbBo5LM6Y9uDj+ghoWeakZnObgDbE8xjr7WUff0mylvcd0kknqAAA)" alt="Couple sitting under a parasol, she in a red dress" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 25</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-17.jpg" data-cat="Heritage" aria-label="View larger: Woman in coral beads and green attire applying mascara in a compact mirror">
+              <img src="images/work/work-17.jpg" srcset="images/work/work-17-480.webp 480w, images/work/work-17.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdAB52RweqeR6fsoAA/uNFg2DGYTOlr+xldWgZobBf9/SmJh1KtzVP66nA8xHU7dWASc9rxBLZfmvTpaDu6JaT4LDAxsfcqIOlo5CcbwAA)" alt="Woman in coral beads and green attire applying mascara in a compact mirror" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 17</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-13.jpg" data-cat="Editorial" aria-label="View larger: Friends in streetwear posing beside a tricycle taxi">
+              <img src="images/work/work-13.jpg" srcset="images/work/work-13-480.webp 480w, images/work/work-13.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoPABQAPt1apkyopSOiMAgBEBuJaACdBagAs3kj2cB6KVYA+/DSRqE0WXO9S86Mq3UN51LHvXQ8w9lg2qsPHn3+pqroMMaVZPhaAmaniwYF+N6+aEAx8d/nm6E2r9tumVfasfGE/U7k0ZnezMybVSG5MMiQAA==)" alt="Friends in streetwear posing beside a tricycle taxi" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 13</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-01.jpg" data-cat="Portraits" aria-label="View larger: Woman in an off-shoulder black dress posing among palm fronds">
+              <img src="images/work/work-01.jpg" srcset="images/work/work-01-480.webp 480w, images/work/work-01.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBACdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoMYABv7pcT+cW0PP0QoAP5IQnssIAW49H5JhZKhMB/PFVHZiHobRL6PpA8KMj1Z3bLymmjq94pI9Sqm5LblctTHoTgHXpkp5jRZElpgmtGz7tQgYkHTNOBypfRRegXWigAAAA==)" alt="Woman in an off-shoulder black dress posing among palm fronds" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 01</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="family" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-27.jpg" data-cat="Family" aria-label="View larger: Smiling child hugging his father on the lawn">
+              <img src="images/work/work-27.jpg" srcset="images/work/work-27-480.webp 480w, images/work/work-27.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoPABQAPt1apkyopSOiMAgBEBuJbACdMoADQxFbqEWPTAKtgG1wAP7RqCGtw9ljPeRo0mCz2y+oSo+LsqQTcvpkEO/IpdmGAX+xjhW3AxYhWwqWszj7alRJcO/Wir6jXfn8xo1F4bZnoxfU7TZHK3/f0gO0p5ChCq04AAAA)" alt="Smiling child hugging his father on the lawn" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Family</span><span>No. 27</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-19.jpg" data-cat="Editorial" aria-label="View larger: Woman in a white fedora and crop top under trees">
+              <img src="images/work/work-19.jpg" srcset="images/work/work-19-480.webp 480w, images/work/work-19.jpg 1005w" width="1005" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoR3ACVf//95g4JMYADOB8Tk2GuO4IjaGFOeEKpLO9q0F4vggFn36nHQ0ikeE0pGU4BFL0AXUY+JQfUG0KIWJKTSIwxRntPsBrB/e6yzSayZPbBo3HVQAA==)" alt="Woman in a white fedora and crop top under trees" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 19</span></span>
+            </button>
+          </figure>
+          <figure class="tile is-wide" data-cat="couples" data-wide data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-10.jpg" data-cat="Couples" aria-label="View larger: Couple sharing a playful moment in a pine forest">
+              <img src="images/work/work-10.jpg" srcset="images/work/work-10-480.webp 480w, images/work/work-10.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJYwDCm1/AXfOzCqNKq9bIwbAA9V8mbdqxThg+ch9ZVBnuj7X5ZQDlv1VRKkjWDYawmogfS6v889OjNbKR12Hku8BuzPVhLhiWavUzUZdhH1tloAA=)" alt="Couple sharing a playful moment in a pine forest" sizes="(min-width: 1024px) 50vw, (min-width: 720px) 66vw, 100vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 10</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-31.jpg" data-cat="Portraits" aria-label="View larger: Woman in a floral dress against striped window shadows">
+              <img src="images/work/work-31.jpg" srcset="images/work/work-31-480.webp 480w, images/work/work-31.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoPABQAPt1cp0yopSOiMAgBEBuJZQCw7CG6yxYRFmkDI2UAAP7Cfh3ZLrNXvlNYRO1KXnfLeDs1oLZB0exvb1fwxJV4mi58Klb0h7orO5kjae0YcQGZCsXSLAUJEkh4hchsAAAA)" alt="Woman in a floral dress against striped window shadows" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 31</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-16.jpg" data-cat="Heritage" aria-label="View larger: Strands of red coral beads laid across a rock">
+              <img src="images/work/work-16.jpg" srcset="images/work/work-16-480.webp 480w, images/work/work-16.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoABxmLnBDYOaxBhNIAA/uPBjBs4oJpsJVMbjzrgBGq749cym5BOSCW0zvitzosNx1wjrdCN8W1F6v2J0TISfURy+p4ryRui/UttXohYAAA=)" alt="Strands of red coral beads laid across a rock" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 16</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-24.jpg" data-cat="Editorial" aria-label="View larger: Man in a white hat and tie mid-stride on a tree-lined road">
+              <img src="images/work/work-24.jpg" srcset="images/work/work-24-480.webp 480w, images/work/work-24.jpg 1041w" width="1041" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJQBUeg4WDQviwa9bfovdfEAD+qfqp7S2BFF1+hRN6dUwtScXuQFSs7YBGgJ0REeTOhLFdHbNbXoz6yUrcXXRrVuV+6q0zrOH5tryZcxcbFaAA)" alt="Man in a white hat and tie mid-stride on a tree-lined road" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 24</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-02.jpg" data-cat="Couples" aria-label="View larger: Couple laughing together on the grass, a red rose in her hand">
+              <img src="images/work/work-02.jpg" srcset="images/work/work-02-480.webp 480w, images/work/work-02.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoJYwAiQpgz5QqxlfKgA/R+EgxsQh0pqm5tQvkxIf9lE+KYq3pvcmaiAmZcr3xFjQYCn8tET/RfNV6VzinT39kdscmi+KoTnEdbYt93YQCCcwg8DMVNhjZirjgWUVAAA)" alt="Couple laughing together on the grass, a red rose in her hand" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 02</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-08.jpg" data-cat="Portraits" aria-label="View larger: Young man in a yellow shirt relaxing in a white chair among palms">
+              <img src="images/work/work-08.jpg" srcset="images/work/work-08-480.webp 480w, images/work/work-08.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJagCdABuMOzt6JDfYIMQIm4AA/tzUyZFJqOb05hpKduXU77LmMTEhxbQcSJKfq6llnmPtUpvSqLe1QdEnGNOz5ZIcpwh43lc/jqNGR/bLV0TGW7Mf2Cp5gloAAA==)" alt="Young man in a yellow shirt relaxing in a white chair among palms" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 08</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="family" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-29.jpg" data-cat="Family" aria-label="View larger: Little boy in a plaid shirt standing proudly on the lawn">
+              <img src="images/work/work-29.jpg" srcset="images/work/work-29-480.webp 480w, images/work/work-29.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJbAAAV68Da7JWFRMejsJlgAD+0d3dujzFocwRkJmxQ+yvtyrVj5iqj46Jvbx39XCZfxINaR9+7d4AEz/7kAk9J4ln/oUjOVmtShb4OHvAfG3aH63xyoAA)" alt="Little boy in a plaid shirt standing proudly on the lawn" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Family</span><span>No. 29</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-20.jpg" data-cat="Editorial" aria-label="View larger: Woman in sunglasses with a hand on her head in golden light">
+              <img src="images/work/work-20.jpg" srcset="images/work/work-20-480.webp 480w, images/work/work-20.jpg 1032w" width="1032" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoQABQAPt1apkyopSOiMAgBEBuJYgC258ACS66ED/d9Vz58G8oAAPwuTUoBB+pyVRactqJ4tmu4NYxcsIBnjNWXhdOcw07pQx/2mBG6eIJ6N7KMauhPIdj4fZKuPoc9GiUXjxnQgrGqjNOArezcJYAA)" alt="Woman in sunglasses with a hand on her head in golden light" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 20</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="heritage" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-15.jpg" data-cat="Heritage" aria-label="View larger: Girl in a green patterned dress leaning on a tree trunk">
+              <img src="images/work/work-15.jpg" srcset="images/work/work-15-480.webp 480w, images/work/work-15.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBWAAdh+kDf+vhQQAAD+zNdboz1VgZiy0+IkpTYjO/UqJ+fgoAis/s/KXnjT1TPpwESbpLmChz0orsE95lMp0uAIKj0w1S+Qtro4pfviUpAvmKx4AA==)" alt="Girl in a green patterned dress leaning on a tree trunk" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Heritage</span><span>No. 15</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-30.jpg" data-cat="Portraits" aria-label="View larger: Woman in a floral print dress leaning on a railing">
+              <img src="images/work/work-30.jpg" srcset="images/work/work-30-480.webp 480w, images/work/work-30.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYwCdABIx7WEJbZEyVEAA/pDAL3fUTkCtmGlavgvfkvxFcOAQXrmYHrCZ9DwLxzWJegQfZveUrmPMR6WlaN3U2Frvv6ytdNGfMhHATnH4gCF4K5K9wAAA)" alt="Woman in a floral print dress leaning on a railing" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 30</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="couples" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-26.jpg" data-cat="Couples" aria-label="View larger: Couple hidden behind an orange umbrella">
+              <img src="images/work/work-26.jpg" srcset="images/work/work-26-480.webp 480w, images/work/work-26.jpg 1001w" width="1001" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJbACdMoR4GBKnQIVWB8M90ADifSoanSzjgEn8nkZsTdJmaPutiFtY42VGcFmtc2Nx4Fv+kTTYHN2Dztq7XFU5G1tHxF31/iz8ao5JNOADQI4F8THVk/8LM0q79CaP5ZmK5AAA)" alt="Couple hidden behind an orange umbrella" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Couples</span><span>No. 26</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-09.jpg" data-cat="Editorial" aria-label="View larger: Black-and-white portrait of a man lifting his tank top">
+              <img src="images/work/work-09.jpg" srcset="images/work/work-09-480.webp 480w, images/work/work-09.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJaQAAMKWN12NwUnv0gAD+6dnBXHp6/U/m2bI9BkjTax4tYeMV8BLOiYz7veNiDz6F7AHAV1DTjo7XncKj8FaCLSRWsqmBxUAeQXVZEajk4uyAAAA=)" alt="Black-and-white portrait of a man lifting his tank top" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 09</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-12.jpg" data-cat="Portraits" aria-label="View larger: Woman in a cream blouse and pencil skirt at a campus gate">
+              <img src="images/work/work-12.jpg" srcset="images/work/work-12-480.webp 480w, images/work/work-12.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJZACdMoRwACm+EtEdz/Wr2TAA/ucSz73acwD6vfFPlglWBL0XQI4qu//yAtjkxHzy+nyCHCTUarBj+MWC7uBb3mKD7NeuImnQpBn3fuYieE3AAAA=)" alt="Woman in a cream blouse and pencil skirt at a campus gate" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 12</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-23.jpg" data-cat="Editorial" aria-label="View larger: Friends in streetwear talking outside a campus building">
+              <img src="images/work/work-23.jpg" srcset="images/work/work-23-480.webp 480w, images/work/work-23.jpg 1035w" width="1035" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoAByreckMaaJ2JgAP7c4gzyOxb3RwhJB1IqWNXboAkVs2TgKpRNgp4JKIIaDeiiFi5Vn3KKEykiQaIMuP1SYIdmynP+vLv39jdJq6TqvIh8AAAA)" alt="Friends in streetwear talking outside a campus building" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 23</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="family" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-28.jpg" data-cat="Family" aria-label="View larger: Little boy in a red vest sitting on the grass">
+              <img src="images/work/work-28.jpg" srcset="images/work/work-28-480.webp 480w, images/work/work-28.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBACdASoPABQAPt1apkyopSOiMAgBEBuJZAC7L144ACUTekECvhVap/MJwAD+6fUjDjFPaF4l1XFFxfa0besWCIkE03zKgXmn2W70k3/G5fXAJZ+iyskqko0rwBhDcAQVhx3TvGbxxHfY7fpxzERpR6deBoAA)" alt="Little boy in a red vest sitting on the grass" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Family</span><span>No. 28</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-04.jpg" data-cat="Portraits" aria-label="View larger: Woman in a floral dress smiling over her shoulder in a garden">
+              <img src="images/work/work-04.jpg" srcset="images/work/work-04-480.webp 480w, images/work/work-04.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoPABQAPt1apkyopSOiMAgBEBuJYgCdIEzRABqpZLJI9YZHlcOYAAD2PI74Co0ZDAGuT1aAVfgFHB7gylD0StkyS5AA57X0eUD5coQ3gJ3jnKT+j6R6P1Darxv3LhfWV4uwPPzol+qlFEfZJhnjYz6RR7hhTVxIAAA=)" alt="Woman in a floral dress smiling over her shoulder in a garden" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 04</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-18.jpg" data-cat="Editorial" aria-label="View larger: Woman in sunglasses adjusting her braids, framed by the foreground">
+              <img src="images/work/work-18.jpg" srcset="images/work/work-18-480.webp 480w, images/work/work-18.jpg 1027w" width="1027" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoQABQAPt1apkyopSOiMAgBEBuJZgC06CBv2EWObRf02F+mSPAA+v0i+oqqUUbTkussu2LzK+hBYomZjcWplpqjO9VVsD4ckNj9BEE1i6cb0k7PfouNzE6kHWEc0LU3u9VYSTA9/bFndgAA)" alt="Woman in sunglasses adjusting her braids, framed by the foreground" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 18</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-32.jpg" data-cat="Portraits" aria-label="View larger: Woman in a black off-shoulder dress seated on the grass">
+              <img src="images/work/work-32.jpg" srcset="images/work/work-32-480.webp 480w, images/work/work-32.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJagCdAA3/DnTv0fBZxg4AAP7asxYsGoLSq8vAlI5G6qp+SxIvSgzSBEVBPk5saX3+tf6lG7RPV8zvY8TQX2eW8qCd/LNpQHjRd+xa/vWCjvQSI/xI1cBCzJvOdNmAAAA=)" alt="Woman in a black off-shoulder dress seated on the grass" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 32</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-11.jpg" data-cat="Editorial" aria-label="View larger: Young man in a cropped tank top in front of a yellow machine">
+              <img src="images/work/work-11.jpg" srcset="images/work/work-11-480.webp 480w, images/work/work-11.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJZACdICXDMhHHFsMd+Oa4yhAgAP7pOaV24mpuB7bWznWcRraFdtYfwa+9lp624nQUv6oyrZQZnHNsXk/ytMWD6efdi39p08fZQLypiB/u1ih8DKrxu33S5yvXOwWAAAA=)" alt="Young man in a cropped tank top in front of a yellow machine" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 11</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-22.jpg" data-cat="Portraits" aria-label="View larger: Girl with pink braids in a denim jacket sitting on steps">
+              <img src="images/work/work-22.jpg" srcset="images/work/work-22-480.webp 480w, images/work/work-22.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoADT56+ptvg/aEYmY9AAP6u9phLF6YSQme0stkIBqnlnbWqVd6kUXVl16ssx+2dwx5si6cIp7APfUr7sriSfzUu6A82v4AWxG1PLqAA)" alt="Girl with pink braids in a denim jacket sitting on steps" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 22</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-06.jpg" data-cat="Editorial" aria-label="View larger: Man in a graphic tee seated on a patio chair, hand to his chin">
+              <img src="images/work/work-06.jpg" srcset="images/work/work-06-480.webp 480w, images/work/work-06.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQAwCdASoPABQAPt1apkyopSOiMAgBEBuJaAAAOgxuAWKZNZIAAP7fJibh4RZo5SaQrSciKjrabkNvjy+VzfEP5Lcq9lo+FsdEmVpHzUdNlzB2Ipev76ORqWVAl/mWBl48Xy0NZM8o5bAJ1pNl6vbg6AMAYo1jdUkhtEQ+9AAAAA==)" alt="Man in a graphic tee seated on a patio chair, hand to his chin" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 06</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-14.jpg" data-cat="Editorial" aria-label="View larger: Two women in school-style outfits posing on a log in the woods">
+              <img src="images/work/work-14.jpg" srcset="images/work/work-14-480.webp 480w, images/work/work-14.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBdgA+8gVDOhR+2RNIdgAP2nsEld+Wq+Ep4fsd3Po87QLt4qjrEdtomzW5sPZQds+RYmOB8yebVXs0pKOJTyo4Toq5GBeTC5GBQ/IlNQvC1Vi3vhu2Q25r0aa4AA)" alt="Two women in school-style outfits posing on a log in the woods" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 14</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-33.jpg" data-cat="Portraits" aria-label="View larger: Young man in a white tee standing in a sunlit field">
+              <img src="images/work/work-33.jpg" srcset="images/work/work-33-480.webp 480w, images/work/work-33.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJagCsACP0x7OQCMi0qEqwAP6p20yCJDp1YG1myED/gi8+7V1CnBcnf8I/BAyVK+/0pu4/b8PUc+kvbxdoD2GQZGoTNX2DaVXYYIdJVC05pmrpsl9RPGDFudk/OO9gP46W8AAA)" alt="Young man in a white tee standing in a sunlit field" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 33</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-05.jpg" data-cat="Editorial" aria-label="View larger: Woman in an oversized graphic sweatshirt on a campus street">
+              <img src="images/work/work-05.jpg" srcset="images/work/work-05-480.webp 480w, images/work/work-05.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBfnA9VzjPXvpJgAAP4nRaG6wZx2KmsH7S8WGil87IjUyhkWxPLg0gBA9sWi980A6tHU3MOcHg7zXt2LU0174OAjE4Vfn8gCUsbnNbGzKXLJ1fnLVGMXrrwLKlN7C8AAAA==)" alt="Woman in an oversized graphic sweatshirt on a campus street" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 05</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="portraits" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-21.jpg" data-cat="Portraits" aria-label="View larger: Young man in a white shirt standing beside his backpack">
+              <img src="images/work/work-21.jpg" srcset="images/work/work-21-480.webp 480w, images/work/work-21.jpg 959w" width="959" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOgArzr97jCZ9y5YrAA/YoEwULzwFyP6Cg1+VrAyDpc6qUsIwohibdIayq3lji+yko1lmwNZKDulSYizZTQPCEbF+pR34vqidfLEtS4kL8Gq/cPTysJjSCk1zvUAAA=)" alt="Young man in a white shirt standing beside his backpack" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Portraits</span><span>No. 21</span></span>
+            </button>
+          </figure>
+          <figure class="tile" data-cat="editorial" data-reveal>
+            <button class="tile-btn" type="button" data-full="images/work/work-07.jpg" data-cat="Editorial" aria-label="View larger: Man in a cartoon-print tee checking his phone on a terrace">
+              <img src="images/work/work-07.jpg" srcset="images/work/work-07-480.webp 480w, images/work/work-07.jpg 960w" width="960" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoPABQAPt1apkyopSOiMAgBEBuJaAC7AA8ONgafo3LdQAD42oDhdeylU/R1XNl5b22cbMsUzV/nKzwLymMh4bnHt1VyVmnBFrnc6aPTO10FpXxKVTnlsb4uYsCX8zLk5vcw4wMzzLoSRzMFVygq5kFchPQAAA==)" alt="Man in a cartoon-print tee checking his phone on a terrace" sizes="(min-width: 1024px) 25vw, (min-width: 720px) 33vw, 50vw">
+              <span class="tile-cap" aria-hidden="true"><span>Editorial</span><span>No. 07</span></span>
+            </button>
+          </figure>
         </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
-        </div>
-    </aside>   
-
-    <section class="portfolio-hero">
-        <div class="hero-content">
-            <h1><span class="highlight">Portfolio</span></h1>
-            <p>Discover a curated collection of my best moments, landscapes, and stories captured through the lens.</p>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="masonry-gallery">
-        <div class="masonry">
-            <img src="images/img (1).jpg" alt="Portfolio 1" class="masonry-item">
-            <img src="images/img (2).jpg" alt="Portfolio 2" class="masonry-item">
-            <img src="images/img (3).jpg" alt="Portfolio 3" class="masonry-item">
-            <img src="images/img (4).jpg" alt="Portfolio 4" class="masonry-item">
-            <img src="images/img (5).jpg" alt="Portfolio 5" class="masonry-item">
-            <img src="images/img (6).jpg" alt="Portfolio 6" class="masonry-item">
-            <img src="images/img (7).jpg" alt="Portfolio 7" class="masonry-item">
-            <img src="images/img (8).jpg" alt="Portfolio 8" class="masonry-item">
-            <img src="images/img (9).jpg" alt="Portfolio 9" class="masonry-item">
-            <img src="images/img (10).jpg" alt="Portfolio 10" class="masonry-item">
-            <img src="images/img (11).jpg" alt="Portfolio 11" class="masonry-item">
-            <img src="images/img (12).jpg" alt="Portfolio 12" class="masonry-item">
-            <img src="images/img (13).jpg" alt="Portfolio 13" class="masonry-item">
-            <img src="images/img (14).jpg" alt="Portfolio 14" class="masonry-item">
-            <img src="images/img (15).jpg" alt="Portfolio 15" class="masonry-item">
-            <img src="images/img (16).jpg" alt="Portfolio 16" class="masonry-item">
-            <img src="images/img (17).jpg" alt="Portfolio 17" class="masonry-item">
-            <img src="images/img (18).jpg" alt="Portfolio 18" class="masonry-item">
-            <img src="images/img (19).jpg" alt="Portfolio 19" class="masonry-item">
-            <img src="images/img (20).jpg" alt="Portfolio 20" class="masonry-item">
-            <img src="images/img (21).jpg" alt="Portfolio 21" class="masonry-item">
-            <img src="images/img (22).jpg" alt="Portfolio 22" class="masonry-item">
-            <img src="images/img (23).jpg" alt="Portfolio 23" class="masonry-item">
-            <img src="images/img (24).jpg" alt="Portfolio 24" class="masonry-item">
-            <img src="images/img (25).jpg" alt="Portfolio 25" class="masonry-item">
-            <img src="images/img (26).jpg" alt="Portfolio 26" class="masonry-item">
-            <img src="images/img (27).jpg" alt="Portfolio 27" class="masonry-item">
-            <img src="images/img (28).jpg" alt="Portfolio 28" class="masonry-item">
-            <img src="images/img (29).jpg" alt="Portfolio 29" class="masonry-item">
-            <img src="images/img (30).jpg" alt="Portfolio 30" class="masonry-item">
-            <img src="images/img (31).jpg" alt="Portfolio 31" class="masonry-item">
-            <img src="images/img (32).jpg" alt="Portfolio 32" class="masonry-item">
-            <img src="images/img (33).jpg" alt="Portfolio 33" class="masonry-item">
-            <!-- Add more images as needed -->
+  <dialog class="viewer" id="viewer" aria-label="Photo viewer">
+    <div class="viewer-bar"><p><b data-viewer-index>01</b> / <span data-viewer-total>56</span></p><button class="icon-btn" type="button" data-viewer-close aria-label="Close viewer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+    <div class="viewer-stage">
+      <img data-viewer-img alt="" class="ph">
+      <button class="icon-btn viewer-nav viewer-prev" type="button" data-viewer-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="icon-btn viewer-nav viewer-next" type="button" data-viewer-next aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <p class="viewer-caption" data-viewer-caption></p>
+  </dialog>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
         </div>
-    </section>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-    <section class="footer">
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html" class="active">Portfolio</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="services.html">Services</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
-            </div>
-        </footer>
-    </section>
-    
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
-
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
-    <script src="navbar.js"></script>
-
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mide-shotzx.vercel.app/sitemap.xml

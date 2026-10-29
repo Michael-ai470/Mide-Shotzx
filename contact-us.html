@@ -1,197 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Mide Shotzx</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & Booking — Mide Shotzx</title>
+  <meta name="description" content="Book a portrait, couple, family or brand session with Mide Shotzx in Akure, Nigeria. Send a message, call +234 808 021 8181 or chat on WhatsApp.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/contact-us.html">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="Contact & Booking — Mide Shotzx">
+  <meta property="og:description" content="Book a portrait, couple, family or brand session with Mide Shotzx in Akure, Nigeria. Send a message, call +234 808 021 8181 or chat on WhatsApp.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/contact-us.html">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/contact.js"></script>
 </head>
 <body>
-    <section class="navigation">
-        <nav class="navbar">
-            <div class="logo">Mide Shotzx</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact-us.html" class="active">Contact Us</a></li>
-                </ul>  
-            <div class="toggle-theme mobile-toggle-theme">
-                <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                </button>
-                <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                </button>
-            </div>
-            <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>                                                                                                                                    
-         </nav>
-    </section>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html">Work</a>
+          <a href="gallery.html">Films</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About</a>
+          <a href="contact-us.html" aria-current="page">Contact</a>
         </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
-            </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
-            </button>
-        </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
-        </div>
-    </aside>   
-
-     <!-- Hero -->
-  <section class="portfolio-hero">
-    <div class="hero-content">
-      <h1><span class="highlight">Contact</span> Us</h1>
-      <p>Have questions or a project in mind? Let’s talk about it. We’re just a message away.</p>
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      </div>
     </div>
-  </section>
+  </header>
 
-         <!-- Contact Form Section -->
-    <section class="contact-section" style="padding: 60px 20px; background: #181818; color: #fff;">
-        <div class="contact-section" style="padding: 60px 20px;">
-            <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px;">
-                <!-- Form -->
-                <div class="contact-form contact-animate" style="flex: 1 1 450px;">
-                    <form style="display: flex; flex-direction: column; gap: 20px;" action="https://formspree.io/f/xkgbqgyk" method="POST">
-                        <input type="text" placeholder="Your Name" name="Name" required style="padding: 12px; background: #222; color: #fff; border: 1px solid #FFD600; border-radius: 8px;"/>
-                        <input type="email" placeholder="Your Email" name="Email" style="padding: 12px; background: #222; color: #fff; border: 1px solid #FFD600; border-radius: 8px;"/>
-                        <textarea placeholder="Your Message" rows="6" name="message" required style="padding: 12px; background: #222; color: #fff; border: 1px solid #FFD600; border-radius: 8px;"></textarea>
-                        <button type="submit" class="theme-btn" style="max-width: 200px;">Send Message</button>
-                    </form>
-                </div>
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="portfolio.html"><span>02</span>Work</a>
+      <a href="gallery.html"><span>03</span>Films</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="about-us.html"><span>05</span>About</a>
+      <a href="contact-us.html" aria-current="page"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
 
-                <!-- Contact Info -->
-                <div class="contact-info contact-animate" style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px;">
-                    <div >
-                        <div id="email" class="contact-container">
-                            <h3 style="color: #FFD600;">Email</h3>
-                            <p><a href="mailto:olumidefalade250@gmail.com" target="_blank" >olumidefalade250@gmail.com</a></p>
-                        </div>
-                        <div class="contact-container">
-                            <h3 style="color: #FFD600;">Phone</h3>
-                            <p>+234 808 021 8181</p>
-                        </div>
-                        <div class="contact-container">
-                            <h3 style="color: #FFD600;">Studio Address</h3>
-                            <p>FUTA North Gate, Akure, Nigeria</p>
-                        </div>
-                        <div class="contact-container">
-                            <h3 style="color: #FFD600;">Business Hours</h3>
-                            <p>Mon–Fri: 8am – 6pm<br>Sat: 9am – 4pm</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <main id="main">
+
+    <section class="page-head" data-hero>
+      <div class="container">
+        <div class="page-head-grid">
+          <div>
+            <p class="eyebrow" data-hero-part="fade" data-motion-hide>Contact &amp; booking</p>
+            <h1 class="page-title" data-hero-part="words" data-motion-hide>Let&rsquo;s plan <em>your shoot.</em></h1>
+          </div>
+          <p class="lead" data-hero-part="focus" data-motion-hide>Tell us what you have in mind and we&rsquo;ll come back with ideas and a clear quote. Prefer to talk? Call or WhatsApp us.</p>
         </div>
+      </div>
     </section>
 
-    <section class="footer">
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="services.html">Services</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html" class="active">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
+    <section class="section" style="padding-top:0">
+      <div class="container contact-grid">
+        <div>
+          <form data-enquiry data-fallback="olumidefalade250@gmail.com" action="https://formspree.io/f/xkgbqgyk" method="POST">
+            <input type="hidden" name="_subject" value="New booking enquiry from the website">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="e-name">
+                <p class="field-error" id="e-name" data-error-for="name"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="e-email">
+                <p class="field-error" id="e-email" data-error-for="email"></p>
+              </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-phone">Phone or WhatsApp <small>(optional)</small></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+              </div>
+              <div class="field">
+                <label for="f-date">Preferred date <small>(optional)</small></label>
+                <input id="f-date" name="date" type="date">
+              </div>
             </div>
-        </footer>
+            <fieldset class="field">
+              <legend>What are you planning?</legend>
+              <div class="choices">
+              <label class="choice"><input type="radio" name="service" value="portrait" checked><span>Portrait session</span></label>
+              <label class="choice"><input type="radio" name="service" value="couples"><span>Couple or family</span></label>
+              <label class="choice"><input type="radio" name="service" value="brand"><span>Brand shoot</span></label>
+              <label class="choice"><input type="radio" name="service" value="event"><span>Event or wedding</span></label>
+              <label class="choice"><input type="radio" name="service" value="video"><span>Film or reel</span></label>
+              <label class="choice"><input type="radio" name="service" value="other"><span>Something else</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-message">Tell us about it</label>
+              <textarea id="f-message" name="message" required maxlength="2000" rows="5" placeholder="The occasion, the location, the look you want…" aria-describedby="e-message"></textarea>
+              <div class="field-hint"><p class="field-error" id="e-message" data-error-for="message"></p><span data-char-count></span></div>
+            </div>
+            <div class="form-foot">
+              <span class="magnet" data-magnetic><button class="btn btn-accent" type="submit">Send enquiry <span class="arrow" aria-hidden="true">&rarr;</span></button></span>
+              <p>We&rsquo;ll only use your details to reply to this enquiry.</p>
+            </div>
+            <p class="form-status" data-status role="alert" tabindex="-1" hidden></p>
+          </form>
+          <div class="sent" data-sent hidden>
+            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="28" cy="28" r="26"/><path d="M17 29l7 7 15-16"/></svg>
+            <h3>Thank you<span data-sent-name></span>. Your message is in.</h3>
+            <p>We&rsquo;ll get back to you with ideas and a quote. If it&rsquo;s urgent, WhatsApp is the fastest way to reach us.</p>
+            <button class="btn btn-ghost" type="button" data-sent-again>Send another message</button>
+          </div>
+        </div>
+
+        <aside class="direct" aria-label="Direct contact">
+          <div class="direct-item" data-reveal>
+            <h3>Email</h3>
+            <a class="big" href="mailto:olumidefalade250@gmail.com" data-copy="olumidefalade250@gmail.com">olumidefalade250@gmail.com</a>
+          </div>
+          <div class="direct-item" data-reveal>
+            <h3>Phone</h3>
+            <a class="big" href="tel:+2348080218181">+234 808 021 8181</a>
+          </div>
+          <div class="direct-item" data-reveal>
+            <h3>WhatsApp</h3>
+            <a class="big" href="https://wa.me/2348075060883" target="_blank" rel="noopener">+234 807 506 0883</a>
+            <p><a class="link-arrow" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Start a chat</a></p>
+          </div>
+          <div class="direct-item" data-reveal>
+            <h3>Studio</h3>
+            <p>FUTA North Gate, Akure, Ondo State, Nigeria</p>
+            <p><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=FUTA+North+Gate+Akure" target="_blank" rel="noopener">Open in Maps</a></p>
+          </div>
+          <div class="direct-item" data-reveal>
+            <h3>Hours</h3>
+            <p>Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;4pm</p>
+          </div>
+          <div class="direct-item" data-reveal>
+            <h3>Follow</h3>
+            <p><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a> &middot; <a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></p>
+          </div>
+        </aside>
+      </div>
     </section>
+  </main>
 
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
+        </div>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
-
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
-    <script src="navbar.js"></script>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

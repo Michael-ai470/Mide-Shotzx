@@ -1,283 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Mide Shotzx</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Films — Mide Shotzx</title>
+  <meta name="description" content="Wedding and engagement films, birthday films and portrait reels by Mide Shotzx, Akure, Nigeria.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/gallery.html">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="Films — Mide Shotzx">
+  <meta property="og:description" content="Wedding and engagement films, birthday films and portrait reels by Mide Shotzx, Akure, Nigeria.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/gallery.html">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/films-page.js"></script>
 </head>
 <body>
-    <section class="navigation">
-        <nav class="navbar">
-            <div class="logo">Mide Shotzx</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            <div class="toggle-theme mobile-toggle-theme">
-                <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                </button>
-                <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                </button>
-            </div>
-            <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html">Work</a>
+          <a href="gallery.html" aria-current="page">Films</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About</a>
+          <a href="contact-us.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="portfolio.html"><span>02</span>Work</a>
+      <a href="gallery.html" aria-current="page"><span>03</span>Films</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="about-us.html"><span>05</span>About</a>
+      <a href="contact-us.html"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="split-hero" data-hero>
+      <div class="split-copy">
+        <p class="eyebrow" data-hero-part="fade" data-motion-hide>Films</p>
+        <h1 class="page-title" data-hero-part="words" data-motion-hide>Stories in <em>motion.</em></h1>
+        <p class="lead" data-hero-part="focus" data-motion-hide>Traditional weddings, engagements, birthday films and portrait reels, shot and cut by the same team that takes your photos.</p>
+        <div class="hero-actions" data-hero-part="pop" data-motion-hide>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html?service=video">Book a film <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="#films">Watch the films</a>
+        </div>
+        <p class="split-meta" data-hero-part="fade" data-motion-hide><span><b>11</b>films</span><span><b>Weddings</b>&amp; engagements</span><span><b>Reels</b>&amp; birthdays</span></p>
+      </div>
+      <div class="split-media is-duo" data-hero-frame>
+        <div><video autoplay muted loop playsinline preload="auto" poster="videos/posters/the-wedding-day.webp" width="576" height="1024" aria-hidden="true"><source src="videos/previews/the-wedding-day.mp4" type="video/mp4"></video>
+          <span class="split-caption">The Wedding Day &middot; Wedding film</span></div>
+        <div><video autoplay muted loop playsinline preload="auto" poster="videos/posters/heritage.webp" width="720" height="1280" aria-hidden="true"><source src="videos/previews/heritage.mp4" type="video/mp4"></video>
+          <span class="split-caption">Heritage &middot; Traditional wedding</span></div>
+      </div>
     </section>
 
-        <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
+    <section class="section" id="films">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">All films</p>
+            <h2 class="section-title">Press play, <em>sound on.</em></h2>
+          </div>
+          <p class="lead">Hover to preview. Click any film to watch it in full with sound.</p>
         </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
+        <div class="films-grid">
+          <article class="film" data-film data-full="videos/the-wedding-day.mp4" data-w="576" style="--ar:576/1024;--r:0.5625;--w:576" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play The Wedding Day, wedding film, 2:47">
+              <img src="videos/posters/the-wedding-day.webp" width="576" height="1024" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoLABQAPt1apkyopSOiMAgBEBuJaACdMoR4GCxx1q4X6fgtKN4AAPkHcxamBCH3e4/ec7rKI9PBfaq37s3oRG4EE40wOwR8WCYg2xeoCykOSmwbH0PQx7aKYxTuXL5Py6wxsAAA)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/the-wedding-day.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
             </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
+            <h3 class="film-title">The Wedding Day</h3>
+            <p class="film-meta">Wedding film &middot; 2:47</p>
+          </article>
+          <article class="film" data-film data-full="videos/heritage.mp4" data-w="720" style="--ar:720/1280;--r:0.5625;--w:720" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Heritage, traditional wedding, 0:38">
+              <img src="videos/posters/heritage.webp" width="720" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoLABQAPt1cpkyopSOiMAgBEBuJZgAAW++HnnvJ1KwAAP7pyn7RAjpv511o57J2ALgFRJAR5ZIddHJHYJnIJE144AA=)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/heritage.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
             </button>
+            <h3 class="film-title">Heritage</h3>
+            <p class="film-meta">Traditional wedding &middot; 0:38</p>
+          </article>
+          <article class="film" data-film data-full="videos/behind-the-scenes.mp4" data-w="720" style="--ar:720/1280;--r:0.5625;--w:720" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Behind the Scenes: Ms Paper, on set, 1:58">
+              <img src="videos/posters/behind-the-scenes.webp" width="720" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoLABQAPt1apkyopSOiMAgBEBuJZQAAW8l1bq+Mm/uAAP6H3x5Xd09kSUMKWgMVqj8wKqj4l/6jnPip9Xtnh08Dmg7e/yd79Kk9oSL982jzp54IwAAAAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/behind-the-scenes.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Behind the Scenes: Ms Paper</h3>
+            <p class="film-meta">On set &middot; 1:58</p>
+          </article>
+          <article class="film" data-film data-full="videos/reel-love.mp4" data-w="848" style="--ar:848/464;--r:1.8276;--w:848" data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Reel Love, couple short, 0:59">
+              <img src="videos/posters/reel-love.webp" width="848" height="464" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoUAAsAPt1apkyopSOiMAgBEBuJbACdMoRwABv+G+OsNx+pqAAA/jrJSmnUAZ7bJ2XFoJHoYd8IUWO7i8mrR6td55NbZndId0egoHo5iRYRmZZN269VI8WdzQ9RHbUw0HZZtc4AAAA=)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/reel-love.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Reel Love</h3>
+            <p class="film-meta">Couple short &middot; 0:59</p>
+          </article>
+          <article class="film" data-film data-full="videos/angelina.mp4" data-w="464" style="--ar:464/848;--r:0.5472;--w:464" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Angelina, birthday film, 0:37">
+              <img src="videos/posters/angelina.webp" width="464" height="848" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoLABQAPt1apkyopSOiMAgBEBuJZgCdACPOk0SzjjMdOcAVaagA/uZ5q8sYRh4WRQkfxZ2AQcJ6RnuVot58+0V7zHfr+lTIjdn8QFfX2qI2fJl7fYZOpEJxPwLQAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/angelina.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Angelina</h3>
+            <p class="film-meta">Birthday film &middot; 0:37</p>
+          </article>
+          <article class="film" data-film data-full="videos/emerald.mp4" data-w="464" style="--ar:464/848;--r:0.5472;--w:464" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Emerald, portrait reel, 0:36">
+              <img src="videos/posters/emerald.webp" width="464" height="848" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAwCdASoLABQAPt1cp0yopSOiMAgBEBuJQAAHJt1lF3GkqwgA612fPINnqEOZ3/+uaQA8PmcZ2yYxgkbf7encZFpsaedE5mOnnmkG0m8YvP3LE55/C2Cm+L6KIwRLdVT+AAAA)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/emerald.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Emerald</h3>
+            <p class="film-meta">Portrait reel &middot; 0:36</p>
+          </article>
+          <article class="film" data-film data-full="videos/suited.mp4" data-w="464" style="--ar:464/848;--r:0.5472;--w:464" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Suited, portrait reel, 0:23">
+              <img src="videos/posters/suited.webp" width="464" height="848" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoLABQAPt1apkyopSOiMAgBEBuJZgCdMoADTQW7HXhWtLAvTUAA/jw0xFE795rOBkZREefRsFkCEquVVqP7CQI3ZtB5F5JNB5sb1755vQWj5PknMf3C+c+WVvq+bOQlgzWO9XcrKMwNxWWsAAA=)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/suited.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Suited</h3>
+            <p class="film-meta">Portrait reel &middot; 0:23</p>
+          </article>
+          <article class="film" data-film data-full="videos/the-engagement.mp4" data-w="640" style="--ar:640/352;--r:1.8182;--w:640" data-reveal>
+            <button class="film-btn" type="button" aria-label="Play The Engagement, traditional engagement, 1:05">
+              <img src="videos/posters/the-engagement.webp" width="640" height="352" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoUAAsAPt1ep00opSOiMAgBEBuJQAhAACHkN1lFTe974AD9J/wwT6WFCTjIK+otiPVmnnSMHpbgjzBLQowQAXHA5KOIvoUozZ/9R5WyybjwKVtQ2/5AAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/the-engagement.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">The Engagement</h3>
+            <p class="film-meta">Traditional engagement &middot; 1:05</p>
+          </article>
+          <article class="film" data-film data-full="videos/in-bloom.mp4" data-w="464" style="--ar:464/848;--r:0.5472;--w:464" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play In Bloom, portrait reel, 0:34">
+              <img src="videos/posters/in-bloom.webp" width="464" height="848" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoLABQAPt1eqE0opSQiMAgBEBuJYwCdAB6SU57YwwLhgADOHi+IkQswx4xfkq0JPfbtnMwmHD3yab4Ac3bo4HMaVKAjNs4ETAg1lFi1i7kAAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/in-bloom.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">In Bloom</h3>
+            <p class="film-meta">Portrait reel &middot; 0:34</p>
+          </article>
+          <article class="film" data-film data-full="videos/productions.mp4" data-w="640" style="--ar:640/352;--r:1.8182;--w:640" data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Mide Shotzx Productions, short film, 2:38">
+              <img src="videos/posters/productions.webp" width="640" height="352" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoUAAsAPt1cpkyopSOiMAgBEBuJYwBVI4dmnN+5pLdsVcKPNIAA/tE/xaD/sNvBaxPjz/pOCSRO0gnqAMI1lRS8KeZbBboF6e8QybOef7aOAAAA)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/productions.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Mide Shotzx Productions</h3>
+            <p class="film-meta">Short film &middot; 2:38</p>
+          </article>
+          <article class="film" data-film data-full="videos/zipo.mp4" data-w="352" style="--ar:352/640;--r:0.5500;--w:352" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Zipo, portrait reel, 0:29">
+              <img src="videos/posters/zipo.webp" width="352" height="640" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoLABQAPt1cpkyopSOiMAgBEBuJZAC06Bq1gxVzllJGwAD4qFe24hTB92e00WkpV/aV5CeEbWWlVYlfeXGty0OSCY3Lj7BuDrZNsDCVz0JV13nRYgBJAAAA)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/zipo.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Zipo</h3>
+            <p class="film-meta">Portrait reel &middot; 0:29</p>
+          </article>
         </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
-        </div>
-    </aside>
-
-    <!-- Gallery Hero Section -->
-    <section class="gallery-hero-section" >
-        <div class="gallery-hero-overlay"></div>
-        <div class="gallery-hero-content">
-            <h1>Experience Stories in Motion</h1>
-            <p>Discover our curated collection of captivating videos, each crafted to inspire and evoke emotion.</p>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Creative Video Gallery -->
-    <section class="video-gallery-section animate-on-scroll">
-        <h2 class="gallery-section-title">Video Gallery</h2>
-        <div class="video-gallery-grid">
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video1.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video2.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video3.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video4.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video5.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/zipo.MOV" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video7.mp4" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/video8.MOV" muted loop preload="metadata"></video>
-            </div>
-            <div class="video-gallery-item">
-                <div class="video-overlay" style="color: white;"><i class="fas fa-play"></i></div>
-                <div class="unmute-icon"><i class="fas fa-volume-mute"></i></div>
-                <video src="videos/wotp.MOV" muted loop preload="metadata"></video>
-            </div>
-                    </div>
-                </section>
-
-        <!-- Call to Action Banner -->
-    <section class="cta-banner animate-on-scroll">
-        <div class="banner-content">
-        <h2>Ready to Tell Your Story?</h2>
-        <a href="contact-us.html" class="cta-button">Get in Touch</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
         </div>
-    </section>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-    <section class="footer">   
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="gallery.html" class="active">Gallery</a>
-                    <a href="services.html">Services</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
-            </div>
-        </footer>
-    </section>
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
-    <script src="navbar.js"></script>
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
-
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
-
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
-
-    <script>
-        document.querySelectorAll('.video-gallery-item').forEach(item => {
-        const video = item.querySelector('video');
-        item.addEventListener('mouseenter', () => video.play());
-        item.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-        });
-        });
-
-
-
-        document.querySelectorAll('.video-gallery-item').forEach(item => {
-        const video = item.querySelector('video');
-        const unmute = item.querySelector('.unmute-icon');
-        let isMuted = true;
-
-        // Play on hover, pause on leave
-        item.addEventListener('mouseenter', () => video.play());
-        item.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-        });
-
-        // Toggle mute on unmute icon click
-        unmute.addEventListener('click', e => {
-            e.stopPropagation();
-            isMuted = !isMuted;
-            video.muted = isMuted;
-            unmute.innerHTML = isMuted
-            ? '<i class="fas fa-volume-mute"></i>'
-            : '<i class="fas fa-volume-up"></i>';
-        });
-
-        // Open modal on video click
-        video.addEventListener('click', e => {
-            e.stopPropagation();
-            openVideoModal(video.src);
-        });
-        });
-
-        // Modal logic
-        function openVideoModal(src) {
-        // Create modal elements
-        const overlay = document.createElement('div');
-        overlay.className = 'video-modal-overlay';
-        overlay.innerHTML = `
-            <div class="video-modal-content">
-            <button class="video-modal-close" aria-label="Close">&times;</button>
-            <video src="${src}" controls autoplay style="background:#000"></video>
-            </div>
-        `;
-        document.body.appendChild(overlay);
-
-        // Close modal on overlay or close button click
-        overlay.addEventListener('click', e => {
-            if (e.target === overlay || e.target.classList.contains('video-modal-close')) {
-            overlay.remove();
-            }
-        });
-        }
-    </script>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

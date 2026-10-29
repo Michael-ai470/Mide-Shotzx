@@ -1,217 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Mide Shotzx</title>
-    <meta name="description" content="Learn more about Mide Shotzx, a creative web development brand focused on delivering quality.">
-    <meta name="keywords" content="Mide Shotzx, web developer, creative websites, quality web design">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Mide Shotzx</title>
+  <meta name="description" content="Meet Mide Shotzx, a photography and film studio in Akure, Nigeria, founded by photographer Olumide Falade.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/about-us.html">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="About — Mide Shotzx">
+  <meta property="og:description" content="Meet Mide Shotzx, a photography and film studio in Akure, Nigeria, founded by photographer Olumide Falade.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/about-us.html">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/about.js"></script>
 </head>
 <body>
-    <section class="navigation">
-        <nav class="navbar">
-            <div class="logo">Mide Shotzx</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html" class="active">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>     
-            <div class="toggle-theme mobile-toggle-theme">
-                <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                </button>
-                <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                </button>
-            </div>
-            <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>                                                                                                                                                                                                                                                 
-         </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html">Work</a>
+          <a href="gallery.html">Films</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html" aria-current="page">About</a>
+          <a href="contact-us.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="portfolio.html"><span>02</span>Work</a>
+      <a href="gallery.html"><span>03</span>Films</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="about-us.html" aria-current="page"><span>05</span>About</a>
+      <a href="contact-us.html"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <section class="split-hero" data-hero>
+      <div class="split-copy">
+        <p class="eyebrow" data-hero-part="fade" data-motion-hide>About the studio</p>
+        <h1 class="page-title" data-hero-part="words" data-motion-hide>Storytellers with <em>a camera.</em></h1>
+        <p class="lead" data-hero-part="focus" data-motion-hide>Mide Shotzx began with a simple passion for visual storytelling. Today it blends artistry with technical skill to turn your ideas into images and films you&rsquo;ll keep for years.</p>
+        <p class="split-meta" data-hero-part="fade" data-motion-hide><span><b>Akure</b>Ondo State, Nigeria</span><span><b>10+ years</b>behind the lens</span><span><b>Photo &middot; Film</b>one team</span></p>
+      </div>
+      <figure class="split-media" data-hero-frame><img src="images/work/work-47.jpg" srcset="images/work/work-47-640.webp 640w, images/work/work-47-1280.webp 1280w, images/work/work-47.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoPABQAPt1cpkyopSOiMAgBEBuJaQAOcAPIyk+eR8omNVNVFiwA1s+WsPfWyMMAc1RJUkR7lSi7nYmr0809U2YSyzWZlIcTTmuAr8OpLCyqT9x5b/1hT0f0kAAAAA==);object-position:45% 45%" alt="Black-and-white close-up of a woman's eyes reflected in a hand mirror" sizes="(min-width: 900px) 50vw, 100vw"></figure>
     </section>
 
-        <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
+    <section class="section">
+      <div class="container statement">
+        <p class="eyebrow">Who we are</p>
+        <div class="statement-body">
+          <p class="statement-text" data-word-light>We believe great photos aren&rsquo;t taken, they&rsquo;re made: with direction, patience and an eye for the light. That&rsquo;s why every session is guided and every frame is finished by hand.</p>
         </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="facts">
+          <div class="fact" data-reveal><p class="fact-num" data-roll>10+</p><p>Years behind the lens</p></div>
+          <div class="fact" data-reveal><p class="fact-num" data-roll>4</p><p>Crafts: photo, film, editing, live</p></div>
+          <div class="fact" data-reveal><p class="fact-num" data-roll>100%</p><p>Logo-free delivery, every time</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container founder member">
+        <div class="founder-photo" data-develop><img src="images/team/olumide-falade.jpg" srcset="images/team/olumide-falade-480.webp 480w, images/team/olumide-falade.jpg 571w" width="571" height="800" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoOABQAPt1epkyopSOiMAgBEBuJZQAAUfLxV6vH/phGgAD9bmPmVXEB80jDFasK2QOTPp1QOiF7pCA6Om9OwUg6c+z2LrbLcuXZaAAA)" alt="Portrait of Olumide Falade, founder and photographer of Mide Shotzx" sizes="(min-width: 860px) 460px, 92vw"></div>
+        <div class="founder-bio">
+          <p class="eyebrow">The founder</p>
+          <h2 class="founder-name" data-own-motion>Olumide Falade</h2>
+          <span class="founder-role">Founder &amp; photographer</span>
+          <div class="founder-rule" data-develop-rule></div>
+          <p>Olumide founded Mide Shotzx and brings over a decade of photography experience and a relentless passion for capturing authentic moments.</p>
+          <p>Every session is directed by Olumide personally, from the first pose to the final grade, so the images you take home look the way the day felt.</p>
+          <div class="hero-actions">
+            <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book with Olumide <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+            <a class="btn btn-ghost" href="portfolio.html">See the work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container founder bts">
+        <div class="bts-film">
+          <article class="film" data-film data-full="videos/behind-the-scenes.mp4" data-w="720" style="--ar:720/1280;--r:0.5625;--w:720" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Behind the Scenes: Ms Paper, on set, 1:58">
+              <img src="videos/posters/behind-the-scenes.webp" width="720" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoLABQAPt1apkyopSOiMAgBEBuJZQAAW8l1bq+Mm/uAAP6H3x5Xd09kSUMKWgMVqj8wKqj4l/6jnPip9Xtnh08Dmg7e/yd79Kk9oSL982jzp54IwAAAAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/behind-the-scenes.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
             </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
-            </button>
+            <h3 class="film-title">Behind the Scenes: Ms Paper</h3>
+            <p class="film-meta">On set &middot; 1:58</p>
+          </article>
         </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
+        <div class="founder-bio">
+          <p class="eyebrow">Behind the scenes</p>
+          <h2 class="founder-name">How a shoot <em>comes together.</em></h2>
+          <p>Hair and makeup, styling, lighting, direction: a session is a whole crew working toward a few perfect frames. This is a day on set for the Ms Paper shoot, in the words of the people who made it.</p>
+          <p>Press play to see how we work, then imagine it built around you.</p>
+          <div class="hero-actions">
+            <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Plan your shoot <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+            <a class="btn btn-ghost" href="gallery.html">All films</a>
+          </div>
         </div>
-    </aside>  
-
-    <!-- Hero -->
-    <section class="about-hero-section services-hero" style="margin-bottom: -30px;">
-        <div class="hero-overlay">
-            <div class="hero-inner animate-on-scroll">
-                <h1>Welcome to <span class="highlight">Mide Shotzx</span></h1>
-                <p>We are storytellers at heart, dedicated to crafting visual narratives that capture the essence of your moments with creativity and precision.</p>
-                <a href="contact-us.html" class="cta-button" style="display: inline-block; padding: 12px 24px; background: #FFD600; color: #181818; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 20px; transition: background 0.2s ease, transform 0.2s ease;">Get in Touch</a>
-            </div>
-        </div>
-    </section>
-     
-    <section class="about-section services-section animate-on-scroll">
-        <div class="services-wrapper">
-            <h2 class="section-title"><span class="word" style="color: #FFD600;">Who</span> We Are</h2>
-            <p class="section-subtitle">At Mide Shotzx, we blend artistry with technical expertise to capture moments that resonate. Our journey began with a passion for visual storytelling, and today, we are a team committed to turning your ideas into unforgettable experiences.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-star"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>To create compelling visual stories that inspire, connect, and endure, using cutting-edge techniques and a client-first approach.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-eye"></i></div>
-                    <h3>Our Vision</h3>
-                    <p>To redefine visual storytelling by pushing creative boundaries and delivering unparalleled quality in every project.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Our Values</h3>
-                    <p>Creativity, integrity, and collaboration drive us. We believe in building lasting relationships with our clients through trust and excellence.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section class="director-section animate-on-scroll service-card" style="position: relative; background: linear-gradient(180deg, #181818 60%, #FFD600 100%); overflow: hidden;">
-        <div class="services-wrapper">
-            <h2 class="section-title" style="position: relative; z-index: 2;">Visionaries Behind <span class="highlight" style="color: #FFD600;">Mide Shotzx</span></h2>
-            <p class="section-subtitle" style="position: relative; z-index: 2;">Discover the creative minds driving our passion for storytelling and innovation.</p>
-            <div class="director-profile" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; position: relative; z-index: 2;">
-                <div class="director-card animate-on-scroll" style="background: #222; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; animation-delay: 0.2s;">
-                    <div class="director-image" style="text-align: center; margin-bottom: 15px;">
-                        <img src="images/olumide.jpg" alt="Olumide Falade Founder of Mide Shotz" width="200" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid #FFD600; object-fit: cover;">
-                    </div>
-                    <div class="director-info" style="text-align: center;">
-                        <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 5px;">Olumide Falade</h3>
-                        <p class="director-title" style="color: #FFD600; font-size: 1rem; margin-bottom: 10px;">Founder / Photographer</p>
-                        <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Olumide Falade is the visionary who sparked Mide Shotzx, bringing over a decade of expertise in photography and a relentless passion for capturing authentic moments. Their innovative approach transforms ideas into visual masterpieces.</p>
-                    </div>
-                </div>
-                <div class="director-card animate-on-scroll" style="background: #222; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; animation-delay: 0.4s;">
-                    <div class="director-image" style="text-align: center; margin-bottom: 15px;">
-                        <img src="images/Ajy_King.jpg" alt="MICHAEL Ajibola, Director of Mide Shotz" width="200" style="width: 200px; height: 200px; border-radius: 50%; border: 3px solid #FFD600; object-fit: cover;">
-                    </div>
-                    <div class="director-info" style="text-align: center;">
-                        <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 5px;">Ajibola Michael</h3>
-                        <p class="director-title" style="color: #FFD600; font-size: 1rem; margin-bottom: 10px;">Creative Director</p>
-                        <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Ajibola Michael steers Mide Shotzx’s creative direction with a flair for cinematic storytelling. With years of videography experience, Michael ensures every project resonates with emotional depth and technical brilliance.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="background-accent" style="position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: radial-gradient(circle at 50% 0%, #FFD60022, transparent 70%); z-index: 1;"></div>
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">What drives us</p>
+            <h2 class="section-title">Why we <em>do this.</em></h2>
+          </div>
         </div>
+        <div class="values">
+          <div class="value" data-reveal><span class="eyebrow">Mission</span><h3>Pictures that last</h3><p>To create visual stories that inspire, connect and endure, using modern techniques and a client-first approach.</p></div>
+          <div class="value" data-reveal><span class="eyebrow">Vision</span><h3>Push the craft</h3><p>To raise the bar for visual storytelling by pushing creative boundaries and delivering work you&rsquo;re proud to show.</p></div>
+          <div class="value" data-reveal><span class="eyebrow">Values</span><h3>Trust, always</h3><p>Creativity, integrity and collaboration. We build lasting relationships with clients through honesty and excellent work.</p></div>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="footer">
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="services.html">Services</a>
-                    <a href="about-us.html" class="active">About</a>
-                    <a href="contact-us.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
-            </div>
-        </footer>
-    </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
+        </div>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
-
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
-    <script src="navbar.js"></script>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

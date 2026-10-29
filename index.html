@@ -1,368 +1,478 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="vYs-jdmbMt01LI95DlCNOHa9nPKitPFdU-EsBbT5aTM" />
-        <!-- Open Graph -->
-    <meta property="og:title" content="Mide Shotzx | Creative Web Developer for Stunning Websites">
-    <meta property="og:description" content="Mide Shotzx creates fast, responsive, and visually stunning websites. Let's build your next creative project today!">
-    <meta property="og:image" content="https://mide-shotzx.vercel.app/images/seo-preview.jpg">
-    <meta property="og:url" content="https://mide-shotzx.vercel.app/">
-    <meta property="og:type" content="website">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mide Shotzx | Creative Web Developer for Stunning Websites">
-    <meta name="twitter:description" content="Mide Shotzx creates fast, responsive, and visually stunning websites. Let's build your next creative project today!">
-    <meta name="twitter:image" content="https://mide-shotzx.vercel.app/images/seo-preview.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mide Shotzx — Portrait, Couple & Brand Photography in Akure</title>
+  <meta name="description" content="Mide Shotzx is a photography and film studio in Akure, Nigeria. Directed portrait, couple, family and brand sessions, cinematic films and clear pricing from ₦50,000.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta name="google-site-verification" content="vYs-jdmbMt01LI95DlCNOHa9nPKitPFdU-EsBbT5aTM">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="Mide Shotzx — Portrait, Couple & Brand Photography in Akure">
+  <meta property="og:description" content="Mide Shotzx is a photography and film studio in Akure, Nigeria. Directed portrait, couple, family and brand sessions, cinematic films and clear pricing from ₦50,000.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
 
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <title>Mide Shotzx</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+  <link rel="preload" as="image" href="images/work/work-34.jpg" imagesrcset="images/work/work-34-640.webp 640w, images/work/work-34-1280.webp 1280w, images/work/work-34.jpg 2160w" imagesizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/work/work-38.jpg" imagesrcset="images/work/work-38-640.webp 640w, images/work/work-38-1280.webp 1280w, images/work/work-38.jpg 2160w" imagesizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/home.js"></script>
 </head>
 <body>
-    <section class="navigation">
-        <nav class="navbar">
-            <div class="logo">Mide Shotzx</div>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            <div class="toggle-theme mobile-toggle-theme">
-                <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                </button>
-                <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                </button>
-            </div>
-            <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </section>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html">Work</a>
+          <a href="gallery.html">Films</a>
+          <a href="services.html">Services</a>
+          <a href="about-us.html">About</a>
+          <a href="contact-us.html">Contact</a>
         </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
-            </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
-            </button>
-        </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
-        </div>
-    </aside>
-
-    <!-- Hero -->
-
-    <section class="hero-section">
-        <div class="hero-background"></div>
-        <div class="hero-overlay">
-            <div class="hero-content animate-on-scroll">
-                <h1>Capturing Moments, <span style="color: #FFD600;">Creating Memories</span></h1>
-                <p>At Mide Shotzx, we transform your vision into timeless visual stories with creativity and precision.</p>
-                <a href="portfolio.html" class="cta-button">Explore Our Portfolio</a>
-            </div>
-        </div>
-    </section>
-
-      <!-- Services Preview -->
-  <section class="services-preview animate-on-scroll">
-    <h2 class="section-title">Our Expertise</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-camera-retro service-icon"></i>
-        <h3>Event Photography</h3>
-        <p>From weddings to corporate gatherings, we capture the emotion and vibrancy of every moment.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-portrait service-icon"></i>
-        <h3>Portrait Sessions</h3>
-        <p>Personalized portraits that convey personality and style, whether Studio, Outdoor or On-Location.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-video service-icon"></i>
-        <h3>Videography</h3>
-        <p>Seamless storytelling through cinematic video, from concept to final cut.</p>
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
       </div>
     </div>
-  </section>
+  </header>
 
-        <!-- Featured Work Carousel -->
-    <section class="carousel-section animate-on-scroll">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="carousel-container">
-            <div class="carousel-wrapper">
-            <div class="carousel-item"><img src="images/img (27).jpg" alt="Featured Work 1"></div>
-            <div class="carousel-item"><img src="images/img (17).jpg" alt="Featured Work 2"></div>
-            <div class="carousel-item"><img src="images/img (25).jpg" alt="Featured Work 3"></div>
-            </div>
-            <div class="carousel-nav">
-            <span class="carousel-dot active"></span>
-            <span class="carousel-dot"></span>
-            <span class="carousel-dot"></span>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-choose-section animate-on-scroll">
-        <h2 class="section-title">Why Choose Mide Shotzx?</h2>
-        <div class="why-choose-grid">
-            <div class="why-card">
-            <i class="fas fa-star why-icon"></i>
-            <h3>Creative Excellence</h3>
-            <p>We blend artistry and technical skill to deliver images that stand out and tell your unique story.</p>
-            </div>
-            <div class="why-card">
-            <i class="fas fa-heart why-icon"></i>
-            <h3>Client-Centered</h3>
-            <p>Your satisfaction is our priority. We listen, adapt, and deliver beyond expectations every time.</p>
-            </div>
-            <div class="why-card">
-            <i class="fas fa-clock why-icon"></i>
-            <h3>Timely Delivery</h3>
-            <p>We respect your time and always deliver high-quality results within agreed timelines.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="process-section animate-on-scroll">
-        <h2 class="section-title">Our Creative Process</h2>
-        <div class="process-steps">
-            <div class="process-step">
-            <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
-            <h3>Inspiration</h3>
-            <p>We start by understanding your vision and brainstorming unique concepts tailored to your story.</p>
-            </div>
-            <div class="process-step">
-            <div class="process-icon"><i class="fas fa-camera-retro"></i></div>
-            <h3>Creation</h3>
-            <p>Our team brings ideas to life with expert photography and videography, capturing every detail.</p>
-            </div>
-            <div class="process-step">
-            <div class="process-icon"><i class="fas fa-magic"></i></div>
-            <h3>Transformation</h3>
-            <p>We edit and refine your visuals, ensuring every image and video is polished and unforgettable.</p>
-            </div>
-            <div class="process-step">
-            <div class="process-icon"><i class="fas fa-gift"></i></div>
-            <h3>Delivery</h3>
-            <p>You receive your finished story—ready to share, cherish, and inspire.</p>
-            </div>
-        </div>
-    </section>
-
-
-  <!-- Call to Action Banner -->
-  <section class="cta-banner animate-on-scroll">
-    <div class="banner-content">
-      <h2>Ready to Tell Your Story?</h2>
-      <a href="contact-us.html" class="cta-button">Get in Touch</a>
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html" aria-current="page"><span>01</span>Home</a>
+      <a href="portfolio.html"><span>02</span>Work</a>
+      <a href="gallery.html"><span>03</span>Films</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="about-us.html"><span>05</span>About</a>
+      <a href="contact-us.html"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
     </div>
-  </section>
-    
-    <section class="testimonial-section animate-on-scroll">
-        <div class="testimonial-wrapper">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-item">
-                    <div class="testimonial-card">
-                        <p>"Mide Shotzx brought our vision to life with stunning creativity and professionalism. Highly recommended!"</p>
-                        <span class="testimonial-author">- Sarah Johnson, Event Planner</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-card">
-                        <p>"The team at Mide Shotzx is exceptional. They captured every moment perfectly."</p>
-                        <span class="testimonial-author">- David Okoye, Wedding Client</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-card">
-                        <p>"Their attention to detail and passion for storytelling is unmatched. A true pleasure to work with!"</p>
-                        <span class="testimonial-author">- Chioma Adebayo, Corporate Client</span>
-                    </div>
-                </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" data-hero aria-label="Mide Shotzx">
+      <div class="reel">
+        <figure class="reel-panel" data-reel-panel data-motion-hide>
+          <div class="reel-drift" data-reel-drift>
+            <div class="reel-zoom" data-reel-zoom>
+              <img src="images/work/work-34.jpg" srcset="images/work/work-34-640.webp 640w, images/work/work-34-1280.webp 1280w, images/work/work-34.jpg 2160w" width="2160" height="2882" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAwCdASoPABQAPt1apkyopSOiMAgBEBuJTIIIwsQAQFgAAP7v6SIOSlPSeq6gPIx+LhyCrO+Gi08U6Pf9Agi0dL30o9NH3ZK15asNAAA=);object-position:50% 22%" alt="Woman in a black square-neck top posing against a brown studio backdrop" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)">
+              <img src="images/work/work-37.jpg" srcset="images/work/work-37-640.webp 640w, images/work/work-37-1280.webp 1280w, images/work/work-37.jpg 2160w" width="2160" height="2882" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOmUACNMS0RqAD+8Af1oKqm1znhQIZA3yJQZwy9EWdD6QocgvrMeRj+mEyRKNqAAA==);object-position:50% 22%" alt="Laughing graduate in gown and cap waving, tassel in hand" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)" data-reel-alt>
             </div>
-            <div class="testimonial-nav">
-                <span class="nav-dot active"></span>
-                <span class="nav-dot"></span>
-                <span class="nav-dot"></span>
+          </div>
+          <figcaption class="reel-label"><b>01</b>Studio</figcaption>
+        </figure>
+        <figure class="reel-panel" data-reel-panel data-motion-hide>
+          <div class="reel-drift" data-reel-drift>
+            <div class="reel-zoom" data-reel-zoom>
+              <img src="images/work/work-38.jpg" srcset="images/work/work-38-640.webp 640w, images/work/work-38-1280.webp 1280w, images/work/work-38.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOgA7DTrE4LVesAAP7lqYiP8ZUfCuBfe/hG1VjyJ9+d5I9ZAHtgFHTipGeszsFA4aWvy6LKiyr6/gbdDPI27e8StwPDCh9bRmKsWcGz7UH7DoOZgAAA);object-position:45% 30%" alt="Woman in a beanie hugging her partner from behind on a basketball court" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)">
+              <img src="images/work/work-40.jpg" srcset="images/work/work-40-640.webp 640w, images/work/work-40-1280.webp 1280w, images/work/work-40.jpg 2272w" width="2272" height="3028" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBdgA9H1lw5kRHQWAAD+6iDIdap5t490XhMg+fy7ia9mvI5jRlJS795NGjBMenyMHna376jJF9kWIzxS6qDH97Y/kvIXSeeAAA==);object-position:50% 30%" alt="Couple standing back to back, her long braids draped over his shoulder" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)" data-reel-alt>
             </div>
+          </div>
+          <figcaption class="reel-label"><b>02</b>Couples</figcaption>
+        </figure>
+        <figure class="reel-panel" data-reel-panel data-motion-hide>
+          <div class="reel-drift" data-reel-drift>
+            <div class="reel-zoom" data-reel-zoom>
+              <img src="images/work/work-43.jpg" srcset="images/work/work-43-640.webp 640w, images/work/work-43-1280.webp 1280w, images/work/work-43.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAQBQCdASoPABQAPt1apkyopSOiMAgBEBuJbACdMoR3IsChAAMyYUhmV9a7jj16HODgAP7qNVLL5L0UZYETOM7fGUDo9RnPztTGoqnrxWRAe6oMoSuXobOXhiQaSQyehdxOrvwb37Vx6cg6PUiI4DQ9rwTX+8fNR+pshpTp6jx409gGdrMGYAAA);object-position:50% 30%" alt="Smiling woman in an orange gele and coral beads" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)">
+              <img src="images/work/work-44.jpg" srcset="images/work/work-44-640.webp 640w, images/work/work-44-1280.webp 1280w, images/work/work-44.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBQCdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoLUCi/90AAj8+eLbv1I1MXfLQIAAP37b3GbgVFg3osuwWqOvBRWSbMqgfsTQeEUHWRnuhvKZBhHZlgz3wyl/xluAFOgL+g9nSIOgm0itiBDUETVRd2saaAYAAA=);object-position:50% 25%" alt="Woman in an orange gele and coral beads in front of a car" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)" data-reel-alt>
+            </div>
+          </div>
+          <figcaption class="reel-label"><b>03</b>Heritage</figcaption>
+        </figure>
+        <figure class="reel-panel" data-reel-panel data-motion-hide>
+          <div class="reel-drift" data-reel-drift>
+            <div class="reel-zoom" data-reel-zoom>
+              <img src="images/work/work-51.jpg" srcset="images/work/work-51-640.webp 640w, images/work/work-51-1280.webp 1280w, images/work/work-51.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJQBadBDvtZ0CgBMBuq4/boAD+8rsLgMBZksIG5R/UFXioGhdURwM4KbMudRWBHbXh+cW7ZV8WTfOpiR7jdttStPfEZPo125w0nYMtzqptfLwA);object-position:50% 30%" alt="Woman in a patterned beanie adjusting her glasses" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)">
+              <img src="images/work/work-55.jpg" srcset="images/work/work-55-640.webp 640w, images/work/work-55-1280.webp 1280w, images/work/work-55.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoPABQAPt1apkyopSOiMAgBEBuJZQCw7CIjCH9Cp/2zR4x/xhwA/u9OozNtUNgfvu8w8q48fVsmftBXzcuEPub+SvQlTas6UbeQ0ZnSw2+/HS3CH9rurBNVBmOu5PeoW2+9pWUDwiMipgAA);object-position:50% 25%" alt="Woman in glasses and a graphic tee posing at dusk" sizes="(max-width: 640px) max(100vw, 75vh), (max-width: 1100px) max(50vw, 75vh), max(25vw, 75vh)" data-reel-alt>
+            </div>
+          </div>
+          <figcaption class="reel-label"><b>04</b>Editorial</figcaption>
+        </figure>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-copy" data-reel-copy>
+        <div class="container hero-copy-grid">
+          <div>
+            <p class="eyebrow" data-reel-part data-motion-hide>Photography &amp; film studio &middot; Akure, Nigeria</p>
+            <h1 class="hero-title" data-reel-title data-motion-hide>Portraits that <em>feel alive.</em></h1>
+          </div>
+          <div class="hero-side">
+            <div class="hero-actions" data-reel-part data-motion-hide>
+              <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+              <a class="btn btn-ghost" href="portfolio.html">View the work</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Our Creative Process Section -->
+    <div class="ticker" data-marquee aria-hidden="true">
+      <div class="ticker-row"><div class="ticker-track" data-marquee-track><span>Portraits</span><span>Couples</span><span>Families</span><span>Editorial</span><span>Heritage</span><span>Brand stories</span><span>Short films</span><span>Live events</span><span>Portraits</span><span>Couples</span><span>Families</span><span>Editorial</span><span>Heritage</span><span>Brand stories</span><span>Short films</span><span>Live events</span></div></div>
+    </div>
 
-
-    <section class="footer">
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="services.html">Services</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotzx?_r=1" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
-            </div>
-        </footer>
+    <section class="section">
+      <div class="container">
+        <div class="statement">
+          <p class="eyebrow">The studio</p>
+          <div class="statement-body">
+            <p class="statement-text" data-word-light>Most people freeze in front of a camera. We direct every pose, chase the light that flatters you and edit each frame by hand, so the photos look like you on your best day.</p>
+            <a class="link-arrow" href="about-us.html">Meet the studio</a>
+          </div>
+        </div>
+        <ul class="value-strip">
+          <li data-reveal><b>Photo &middot; Film &middot; Edit &middot; Live</b>One team, start to finish</li>
+          <li data-reveal><b>Directed sessions</b>We guide every pose and expression</li>
+          <li data-reveal><b>Logo-free delivery</b>Ready to print and post</li>
+          <li data-reveal><b>Clear pricing</b>From &#8358;50,000, with a simple 70/30 payment</li>
+        </ul>
+      </div>
     </section>
 
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+    <section class="rail" data-rail aria-labelledby="work-title">
+      <div class="rail-stage" data-rail-stage>
+        <div class="container rail-head section-head">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 class="section-title" id="work-title" data-own-motion>Five ways we <em>tell a story.</em></h2>
+          </div>
+          <p class="rail-count"><b data-rail-idx>01</b> / 05 &middot; <a class="link-arrow" href="portfolio.html">Full portfolio</a></p>
+        </div>
+        <div class="rail-track" data-rail-track>
+          <article class="rail-panel" data-rail-panel data-rail-label="Studio">
+            <span class="rail-num" aria-hidden="true">01</span>
+            <div class="rail-inner">
+              <div class="rail-figs">
+                <figure class="rail-fig"><img src="images/work/work-34.jpg" srcset="images/work/work-34-640.webp 640w, images/work/work-34-1280.webp 1280w, images/work/work-34.jpg 2160w" width="2160" height="2882" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAwCdASoPABQAPt1apkyopSOiMAgBEBuJTIIIwsQAQFgAAP7v6SIOSlPSeq6gPIx+LhyCrO+Gi08U6Pf9Agi0dL30o9NH3ZK15asNAAA=);object-position:50% 22%" alt="Woman in a black square-neck top posing against a brown studio backdrop" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+                <figure class="rail-fig"><img src="images/work/work-35.jpg" srcset="images/work/work-35-640.webp 640w, images/work/work-35-1280.webp 1280w, images/work/work-35.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJZACdMoMggEmiy/v3Jwh/qJJQAP7ljXWjsp1dXdVujszpWLQzIt2Qiu/QXm93Rc7hRfcqwGpzv62YqAXEDTfWEUB2i0yPWxtip21iQAAAAA==);object-position:50% 25%" alt="Graduate seated in an armchair wearing a cap, hood and Class of 2025 stole" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+              </div>
+              <div class="rail-text">
+                <span class="rail-label">01 &mdash; Studio</span>
+                <h3>Portraits that look like you on your best day.</h3>
+                <p>Lit and directed in the studio, from graduation milestones to personal brand portraits.</p>
+                <a class="link-arrow" href="portfolio.html#studio">See studio</a>
+              </div>
+            </div>
+          </article>
+          <article class="rail-panel" data-rail-panel data-rail-label="Couples">
+            <span class="rail-num" aria-hidden="true">02</span>
+            <div class="rail-inner">
+              <div class="rail-figs">
+                <figure class="rail-fig"><img src="images/work/work-38.jpg" srcset="images/work/work-38-640.webp 640w, images/work/work-38-1280.webp 1280w, images/work/work-38.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQAwCdASoPABQAPt1apkyopSOiMAgBEBuJQBOgA7DTrE4LVesAAP7lqYiP8ZUfCuBfe/hG1VjyJ9+d5I9ZAHtgFHTipGeszsFA4aWvy6LKiyr6/gbdDPI27e8StwPDCh9bRmKsWcGz7UH7DoOZgAAA);object-position:45% 30%" alt="Woman in a beanie hugging her partner from behind on a basketball court" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+                <figure class="rail-fig"><img src="images/work/work-40.jpg" srcset="images/work/work-40-640.webp 640w, images/work/work-40-1280.webp 1280w, images/work/work-40.jpg 2272w" width="2272" height="3028" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJQBdgA9H1lw5kRHQWAAD+6iDIdap5t490XhMg+fy7ia9mvI5jRlJS795NGjBMenyMHna376jJF9kWIzxS6qDH97Y/kvIXSeeAAA==);object-position:50% 30%" alt="Couple standing back to back, her long braids draped over his shoulder" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+              </div>
+              <div class="rail-text">
+                <span class="rail-label">02 &mdash; Couples</span>
+                <h3>Love stories, told honestly.</h3>
+                <p>Pre-wedding shoots, anniversaries and proposals: relaxed sessions that catch the laughter between the poses.</p>
+                <a class="link-arrow" href="portfolio.html#couples">See couples</a>
+              </div>
+            </div>
+          </article>
+          <article class="rail-panel" data-rail-panel data-rail-label="Family">
+            <span class="rail-num" aria-hidden="true">03</span>
+            <div class="rail-inner">
+              <div class="rail-figs">
+                <figure class="rail-fig"><img src="images/work/work-27.jpg" srcset="images/work/work-27-480.webp 480w, images/work/work-27.jpg 960w" width="960" height="1280" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoPABQAPt1apkyopSOiMAgBEBuJbACdMoADQxFbqEWPTAKtgG1wAP7RqCGtw9ljPeRo0mCz2y+oSo+LsqQTcvpkEO/IpdmGAX+xjhW3AxYhWwqWszj7alRJcO/Wir6jXfn8xo1F4bZnoxfU7TZHK3/f0gO0p5ChCq04AAAA);object-position:45% 40%" alt="Smiling child hugging his father on the lawn" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+                <figure class="rail-fig"><img src="images/work/work-29.jpg" srcset="images/work/work-29-480.webp 480w, images/work/work-29.jpg 960w" width="960" height="1280" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJbAAAV68Da7JWFRMejsJlgAD+0d3dujzFocwRkJmxQ+yvtyrVj5iqj46Jvbx39XCZfxINaR9+7d4AEz/7kAk9J4ln/oUjOVmtShb4OHvAfG3aH63xyoAA);object-position:50% 45%" alt="Little boy in a plaid shirt standing proudly on the lawn" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+              </div>
+              <div class="rail-text">
+                <span class="rail-label">03 &mdash; Family</span>
+                <h3>The years go fast. Keep them.</h3>
+                <p>Family and children&rsquo;s sessions paced around little attention spans, with room for the real moments.</p>
+                <a class="link-arrow" href="portfolio.html#family">See family</a>
+              </div>
+            </div>
+          </article>
+          <article class="rail-panel" data-rail-panel data-rail-label="Editorial">
+            <span class="rail-num" aria-hidden="true">04</span>
+            <div class="rail-inner">
+              <div class="rail-figs">
+                <figure class="rail-fig"><img src="images/work/work-51.jpg" srcset="images/work/work-51-640.webp 640w, images/work/work-51-1280.webp 1280w, images/work/work-51.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoPABQAPt1apkyopSOiMAgBEBuJQBadBDvtZ0CgBMBuq4/boAD+8rsLgMBZksIG5R/UFXioGhdURwM4KbMudRWBHbXh+cW7ZV8WTfOpiR7jdttStPfEZPo125w0nYMtzqptfLwA);object-position:50% 30%" alt="Woman in a patterned beanie adjusting her glasses" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+                <figure class="rail-fig"><img src="images/work/work-53.jpg" srcset="images/work/work-53-640.webp 640w, images/work/work-53-1280.webp 1280w, images/work/work-53.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoPABQAPt1cp0yopSOiMAgBEBuJZwAAVUcfDjCMRCDe0g/Q+gAA/vQyxpnmO4UlHo9DfBPIdRIx/3l2psFNO/WVOJaUf3zIb9EWlexcTJjlm0iJYoPqDjYDKpbezSgA);object-position:50% 30%" alt="Woman in a graphic tee with arms crossed against a weathered wall" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+              </div>
+              <div class="rail-text">
+                <span class="rail-label">04 &mdash; Editorial</span>
+                <h3>Streetwear, brands and bold ideas.</h3>
+                <p>Concept shoots for creatives and brands: styling direction, locations and a finished look that stops the scroll.</p>
+                <a class="link-arrow" href="portfolio.html#editorial">See editorial</a>
+              </div>
+            </div>
+          </article>
+          <article class="rail-panel" data-rail-panel data-rail-label="Heritage">
+            <span class="rail-num" aria-hidden="true">05</span>
+            <div class="rail-inner">
+              <div class="rail-figs">
+                <figure class="rail-fig"><img src="images/work/work-44.jpg" srcset="images/work/work-44-640.webp 640w, images/work/work-44-1280.webp 1280w, images/work/work-44.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBQCdASoPABQAPt1apkyopSOiMAgBEBuJagCdMoLUCi/90AAj8+eLbv1I1MXfLQIAAP37b3GbgVFg3osuwWqOvBRWSbMqgfsTQeEUHWRnuhvKZBhHZlgz3wyl/xluAFOgL+g9nSIOgm0itiBDUETVRd2saaAYAAA=);object-position:50% 25%" alt="Woman in an orange gele and coral beads in front of a car" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+                <figure class="rail-fig"><img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="eager" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==);object-position:50% 25%" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="(min-width: 900px) 30vw, 44vw"></figure>
+              </div>
+              <div class="rail-text">
+                <span class="rail-label">05 &mdash; Heritage</span>
+                <h3>Culture, worn with pride.</h3>
+                <p>Traditional attire, coral beads and ceremony, photographed with the detail and colour they deserve.</p>
+                <a class="link-arrow" href="portfolio.html#heritage">See heritage</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="container rail-foot" aria-hidden="true">
+          <span class="rail-caption" data-rail-caption>Portraits</span><span>Keep scrolling</span>
+          <span class="rail-bar"><i data-rail-bar></i></span>
+        </div>
+      </div>
+    </section>
 
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 class="section-title">One studio, <em>four crafts.</em></h2>
+          </div>
+          <div class="lead"><p>Photography and film under one roof, so your stills and your video share one look, one plan and one team.</p><p style="margin-top:20px"><a class="link-arrow" href="services.html">Full pricing</a></p></div>
+        </div>
+        <div class="index" data-index>
+          <div class="index-media" aria-hidden="true">
+            <div class="index-frame">
+              <img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==);object-position:50% 25%" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-24.jpg" srcset="images/work/work-24-480.webp 480w, images/work/work-24.jpg 1041w" width="1041" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJQBUeg4WDQviwa9bfovdfEAD+qfqp7S2BFF1+hRN6dUwtScXuQFSs7YBGgJ0REeTOhLFdHbNbXoz6yUrcXXRrVuV+6q0zrOH5tryZcxcbFaAA);object-position:50% 40%" alt="Man in a white hat and tie mid-stride on a tree-lined road" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-52.jpg" srcset="images/work/work-52-640.webp 640w, images/work/work-52-1280.webp 1280w, images/work/work-52.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoPABQAPt1ep00opSOiMAgBEBuJZwCdACHgU3gryCJFmVzgAP7r3ch91+8GB6wtVM0P+jztTAdgxKkrbSKZ3Ifhk2NAAA==);object-position:50% 30%" alt="Sepia portrait of a woman in a beanie and glasses" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-23.jpg" srcset="images/work/work-23-480.webp 480w, images/work/work-23.jpg 1035w" width="1035" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoAByreckMaaJ2JgAP7c4gzyOxb3RwhJB1IqWNXboAkVs2TgKpRNgp4JKIIaDeiiFi5Vn3KKEykiQaIMuP1SYIdmynP+vLv39jdJq6TqvIh8AAAA);object-position:50% 45%" alt="Friends in streetwear talking outside a campus building" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+            </div>
+            <p class="index-caption"><span>Service <b data-index-idx>01</b> / 04</span><span>Mide Shotzx</span></p>
+          </div>
+          <ol class="index-list">
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">01</span>
+            <div class="index-body">
+              <h3 class="index-title">Photography</h3>
+              <p>Portraits, lifestyle and brand photography &mdash; in the studio, outdoors or on location. Directed, lit and retouched by hand.</p>
+              <div class="index-meta"><b>From &#8358;50,000</b><span>Portraits &middot; Lifestyle &middot; Brand</span></div>
+            </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==);object-position:50% 25%" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">02</span>
+            <div class="index-body">
+              <h3 class="index-title">Videography</h3>
+              <p>Brand films, personal reels, events and weddings, shot cinematic and cut to music so they feel like a story, not a recording.</p>
+              <div class="index-meta"><b>From &#8358;60,000</b><span>Brand &middot; Personal &middot; Events &middot; Weddings</span></div>
+            </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-24.jpg" srcset="images/work/work-24-480.webp 480w, images/work/work-24.jpg 1041w" width="1041" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJQBUeg4WDQviwa9bfovdfEAD+qfqp7S2BFF1+hRN6dUwtScXuQFSs7YBGgJ0REeTOhLFdHbNbXoz6yUrcXXRrVuV+6q0zrOH5tryZcxcbFaAA);object-position:50% 40%" alt="Man in a white hat and tie mid-stride on a tree-lined road" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">03</span>
+            <div class="index-body">
+              <h3 class="index-title">Editing</h3>
+              <p>YouTube edits and Instagram or TikTok reels built to hold attention past the first second, with colour and sound done properly.</p>
+              <div class="index-meta"><b>From &#8358;50,000</b><span>YouTube &middot; Reels &middot; Colour</span></div>
+            </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-52.jpg" srcset="images/work/work-52-640.webp 640w, images/work/work-52-1280.webp 1280w, images/work/work-52.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoPABQAPt1ep00opSOiMAgBEBuJZwCdACHgU3gryCJFmVzgAP7r3ch91+8GB6wtVM0P+jztTAdgxKkrbSKZ3Ifhk2NAAA==);object-position:50% 30%" alt="Sepia portrait of a woman in a beanie and glasses" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">04</span>
+            <div class="index-body">
+              <h3 class="index-title">Live streaming</h3>
+              <p>Seamless HD streams for weddings, concerts and corporate events, so the people who couldn&rsquo;t come still get a front-row seat.</p>
+              <div class="index-meta"><b>Quoted per event</b><span>Weddings &middot; Concerts &middot; Corporate</span></div>
+            </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-23.jpg" srcset="images/work/work-23-480.webp 480w, images/work/work-23.jpg 1035w" width="1035" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoAByreckMaaJ2JgAP7c4gzyOxb3RwhJB1IqWNXboAkVs2TgKpRNgp4JKIIaDeiiFi5Vn3KKEykiQaIMuP1SYIdmynP+vLv39jdJq6TqvIh8AAAA);object-position:50% 45%" alt="Friends in streetwear talking outside a campus building" sizes="90vw"></figure>
+          </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">In motion</p>
+            <h2 class="section-title">Stories you can <em>press play on.</em></h2>
+          </div>
+          <div class="lead"><p>Short films, reels and celebrations. Hover to preview, click to watch with sound.</p><p style="margin-top:20px"><a class="link-arrow" href="gallery.html">All films</a></p></div>
+        </div>
+        <div class="films-grid">
+          <article class="film" data-film data-full="videos/the-wedding-day.mp4" data-w="576" style="--ar:576/1024;--r:0.5625;--w:576" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play The Wedding Day, wedding film, 2:47">
+              <img src="videos/posters/the-wedding-day.webp" width="576" height="1024" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoLABQAPt1apkyopSOiMAgBEBuJaACdMoR4GCxx1q4X6fgtKN4AAPkHcxamBCH3e4/ec7rKI9PBfaq37s3oRG4EE40wOwR8WCYg2xeoCykOSmwbH0PQx7aKYxTuXL5Py6wxsAAA)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/the-wedding-day.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">The Wedding Day</h3>
+            <p class="film-meta">Wedding film &middot; 2:47</p>
+          </article>
+          <article class="film" data-film data-full="videos/reel-love.mp4" data-w="848" style="--ar:848/464;--r:1.8276;--w:848" data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Reel Love, couple short, 0:59">
+              <img src="videos/posters/reel-love.webp" width="848" height="464" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBACdASoUAAsAPt1apkyopSOiMAgBEBuJbACdMoRwABv+G+OsNx+pqAAA/jrJSmnUAZ7bJ2XFoJHoYd8IUWO7i8mrR6td55NbZndId0egoHo5iRYRmZZN269VI8WdzQ9RHbUw0HZZtc4AAAA=)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/reel-love.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Reel Love</h3>
+            <p class="film-meta">Couple short &middot; 0:59</p>
+          </article>
+          <article class="film" data-film data-full="videos/heritage.mp4" data-w="720" style="--ar:720/1280;--r:0.5625;--w:720" data-vertical data-reveal>
+            <button class="film-btn" type="button" aria-label="Play Heritage, traditional wedding, 0:38">
+              <img src="videos/posters/heritage.webp" width="720" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoLABQAPt1cpkyopSOiMAgBEBuJZgAAW++HnnvJ1KwAAP7pyn7RAjpv511o57J2ALgFRJAR5ZIddHJHYJnIJE144AA=)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/heritage.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">Heritage</h3>
+            <p class="film-meta">Traditional wedding &middot; 0:38</p>
+          </article>
+          <article class="film" data-film data-full="videos/the-engagement.mp4" data-w="640" style="--ar:640/352;--r:1.8182;--w:640" data-reveal>
+            <button class="film-btn" type="button" aria-label="Play The Engagement, traditional engagement, 1:05">
+              <img src="videos/posters/the-engagement.webp" width="640" height="352" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoUAAsAPt1ep00opSOiMAgBEBuJQAhAACHkN1lFTe974AD9J/wwT6WFCTjIK+otiPVmnnSMHpbgjzBLQowQAXHA5KOIvoUozZ/9R5WyybjwKVtQ2/5AAA==)" alt="">
+              <video muted loop playsinline preload="none" data-src="videos/previews/the-engagement.mp4" aria-hidden="true" tabindex="-1"></video>
+              <span class="film-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13L14 8z"/></svg></span>
+            </button>
+            <h3 class="film-title">The Engagement</h3>
+            <p class="film-meta">Traditional engagement &middot; 1:05</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-title">From first message <em>to final frame.</em></h2>
+          </div>
+          <p class="lead">No guesswork. You know what happens, what it costs and when you get your photos.</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal><span class="step-num">01</span><h3>Tell us the plan</h3><p>Send the occasion, the date and the feeling you&rsquo;re after. We reply with ideas and a clear quote.</p></li>
+          <li class="step" data-reveal><span class="step-num">02</span><h3>Lock it in</h3><p>We agree on location, looks and timing. A 70% deposit secures your date.</p></li>
+          <li class="step" data-reveal><span class="step-num">03</span><h3>Shoot day</h3><p>A relaxed, directed session. We guide every pose, so you can just show up and be yourself.</p></li>
+          <li class="step" data-reveal><span class="step-num">04</span><h3>Delivery</h3><p>Hand-edited, colour-graded files, logo-free and ready to print and post. The 30% balance is due on delivery.</p></li>
+        </ol>
+      </div>
+    </section>
 
-        // Animate cards on scroll for testimonial
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Kind words</p>
+            <h2 class="section-title">What clients <em>say.</em></h2>
+          </div>
+        </div>
+        <div class="quotes">
+          <figure class="quote" data-reveal>
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Mide Shotzx brought our vision to life with stunning creativity and professionalism. Highly recommended!</p></blockquote>
+            <figcaption><b>Sarah Johnson</b>Event planner</figcaption>
+          </figure>
+          <figure class="quote" data-reveal>
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>The team at Mide Shotzx is exceptional. They captured every moment perfectly.</p></blockquote>
+            <figcaption><b>David Okoye</b>Wedding client</figcaption>
+          </figure>
+          <figure class="quote" data-reveal>
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Their attention to detail and passion for storytelling is unmatched. A true pleasure to work with!</p></blockquote>
+            <figcaption><b>Chioma Adebayo</b>Corporate client</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
+        </div>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-            // Testimonial slider
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        const navDots = document.querySelectorAll('.nav-dot');
-        let current = 0;
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
-        function showTestimonial(index) {
-            testimonials.forEach((item, i) => {
-                item.style.opacity = i === index ? 1 : 0;
-            });
-            navDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-        function nextTestimonial() {
-            current = (current + 1) % testimonials.length;
-            showTestimonial(current);
-        }
-
-        // Add click event for nav dots
-        navDots.forEach((dot, i) => {
-            dot.addEventListener('click', () => {
-                current = i;
-                showTestimonial(current);
-            });
-        });
-
-        // Initialize first testimonial
-        showTestimonial(current);
-
-        // Rotate every 5 seconds
-        setInterval(nextTestimonial, 5000);
-    </script>
-    
-     <!-- Featured work script section -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        // Carousel logic
-        const wrapper = document.querySelector('.carousel-wrapper');
-        const items = document.querySelectorAll('.carousel-item');
-        const dots = document.querySelectorAll('.carousel-dot');
-        let idx = 0;
-        function showSlide(i) {
-            wrapper.style.transform = `translateX(-${i * 100}%)`;
-            dots.forEach((dot, d) => dot.classList.toggle('active', d === i));
-        }
-        dots.forEach((dot, i) => {
-            dot.addEventListener('click', () => {
-            idx = i;
-            showSlide(idx);
-            });
-        });
-        setInterval(() => {
-            idx = (idx + 1) % items.length;
-            showSlide(idx);
-        }, 4000);
-        });
-    </script>
-
-    <script src="navbar.js"></script>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

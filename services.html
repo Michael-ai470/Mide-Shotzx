@@ -1,235 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Mide Shotzx</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services & Pricing — Mide Shotzx</title>
+  <meta name="description" content="Photography from ₦50,000, videography, editing and live streaming by Mide Shotzx in Akure. Clear prices, logo-free delivery and a simple 70/30 payment.">
+  <link rel="canonical" href="https://mide-shotzx.vercel.app/services.html">
+  <meta name="theme-color" content="#0c0b0a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mide Shotzx">
+  <meta property="og:title" content="Services & Pricing — Mide Shotzx">
+  <meta property="og:description" content="Photography from ₦50,000, videography, editing and live streaming by Mide Shotzx in Akure. Clear prices, logo-free delivery and a simple 70/30 payment.">
+  <meta property="og:url" content="https://mide-shotzx.vercel.app/services.html">
+  <meta property="og:image" content="https://mide-shotzx.vercel.app/seo-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Motion gate (motion-kit/ENGINE.md 5.2): intro elements wait for GSAP, never longer than 2.5 s. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function (d, w) {
+      d.classList.add('motion-pending');
+      w.__motionFailsafe = setTimeout(function () {
+        w.__motionShown = new WeakSet(document.querySelectorAll('[data-motion-hide]'));
+        d.classList.remove('motion-pending');
+      }, 2500);
+    })(document.documentElement, window);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion-kit/css/motion-base.css">
+
+  <script defer src="motion-kit/vendor/gsap.min.js"></script>
+  <script defer src="motion-kit/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="motion-kit/vendor/CustomEase.min.js"></script>
+  <script defer src="motion-kit/vendor/SplitText.min.js"></script>
+  <script defer src="motion-kit/vendor/lenis.min.js"></script>
+  <script type="module" src="js/services.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Mide Shotzx</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
-        <div class="toggle-theme mobile-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-            <i class="fas fa-moon"></i>
-            </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-            <i class="fas fa-sun"></i>
-            </button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Mide Shotzx, home">Mide <em>Shotzx</em></a>
+      <nav aria-label="Main">
+        <div class="nav-links">
+          <a href="portfolio.html">Work</a>
+          <a href="gallery.html">Films</a>
+          <a href="services.html" aria-current="page">Services</a>
+          <a href="about-us.html">About</a>
+          <a href="contact-us.html">Contact</a>
         </div>
-        <div class="menu-toggle" aria-label="Open navigation" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>                                                                                                                                    
+      </nav>
+      <div class="nav-end">
+        <span class="magnet nav-cta" data-magnetic><a class="btn btn-accent btn-sm" href="contact-us.html">Book a shoot</a></span>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Mobile">
+      <a href="index.html"><span>01</span>Home</a>
+      <a href="portfolio.html"><span>02</span>Work</a>
+      <a href="gallery.html"><span>03</span>Films</a>
+      <a href="services.html" aria-current="page"><span>04</span>Services</a>
+      <a href="about-us.html"><span>05</span>About</a>
+      <a href="contact-us.html"><span>06</span>Contact</a>
     </nav>
+    <div class="menu-foot">
+      <a class="btn btn-accent" href="contact-us.html">Book a shoot <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <p style="margin-top:16px"><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></p>
+      <p><a href="tel:+2348080218181">+234 808 021 8181</a> &middot; <a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
 
-        <!-- Left Sidebar -->
-    <aside class="side-bar left-bar">
-        <div class="brand-vertical">
-            <span class="brand-initial">M</span>
-            <span class="brand-divider"></span>
-            <span class="brand-initial">S</span>
-        </div>
-        <div class="toggle-theme desktop-toggle-theme">
-            <button class="theme-btn dark-btn active" aria-label="Dark mode">
-                <i class="fas fa-moon"></i>
-                <span class="theme-label">Dark</span>
-            </button>
-            <button class="theme-btn light-btn" aria-label="Light mode">
-                <i class="fas fa-sun"></i>
-                <span class="theme-label">Light</span>
-            </button>
-        </div>
-    </aside>
+  <main id="main">
 
-    <!-- Right Sidebar -->
-    <aside class="side-bar right-bar">
-        <div class="social-vertical">
-            <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@mide_shotz?_t=ZM-8xCH3fs1uFB" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/mide_shotz" aria-label="Twitter" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <span class="vertical-label">Follow</span>
+    <section class="split-hero" data-hero>
+      <div class="split-copy">
+        <p class="eyebrow" data-hero-part="fade" data-motion-hide>Services &amp; pricing</p>
+        <h1 class="page-title" data-hero-part="words" data-motion-hide>Clear prices. <em>Considered work.</em></h1>
+        <p class="lead" data-hero-part="focus" data-motion-hide>Photography, film, editing and live streaming, all from one studio. Here&rsquo;s what we do, what it costs and exactly how booking works.</p>
+        <div class="hero-actions" data-hero-part="pop" data-motion-hide>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="#pricing">See pricing <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="contact-us.html">Get a quote</a>
         </div>
-    </aside>   
-    
-    <section class="services-hero">
-        <div class="hero-overlay">
-            <div class="hero-inner">
-            <h1><span class="highlight">Creative</span> Services That Inspire</h1>
-            <p>From moments to memories — explore the full range of visual storytelling we offer at Mide Shotzx.</p>
-            </div>
-        </div>
+        <p class="split-meta" data-hero-part="fade" data-motion-hide><span><b>From &#8358;50,000</b>per session</span><span><b>70/30</b>payment</span><span><b>Logo-free</b>delivery</span></p>
+      </div>
+      <figure class="split-media is-bright" data-hero-frame><img src="images/work/work-35.jpg" srcset="images/work/work-35-640.webp 640w, images/work/work-35-1280.webp 1280w, images/work/work-35.jpg 2160w" width="2160" height="2880" loading="eager" fetchpriority="high" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoPABQAPt1cpkyopSOiMAgBEBuJZACdMoMggEmiy/v3Jwh/qJJQAP7ljXWjsp1dXdVujszpWLQzIt2Qiu/QXm93Rc7hRfcqwGpzv62YqAXEDTfWEUB2i0yPWxtip21iQAAAAA==);object-position:50% 25%" alt="Graduate seated in an armchair wearing a cap, hood and Class of 2025 stole" sizes="(min-width: 900px) 50vw, 100vw"></figure>
     </section>
 
-    <section class="services-section">
-        <div class="services-wrapper">
-            <h2 class="section-title"><span class="highlight">Our</span> Services</h2>
-            <p class="section-subtitle">Explore what we professionally offer to capture and elevate your moments.</p>
-            
-            <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-camera service-icon"></i>
-                <h3>Photography</h3>
-                <p>Premium still photography for portraits, events, and brands — captured with a creative edge.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fas fa-video service-icon"></i>
-                <h3>Videography</h3>
-                <p>We bring your vision to life through cinematic storytelling and high-end production.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fas fa-edit service-icon"></i>
-                <h3>Editing</h3>
-                <p>Top-tier post-production that transforms raw footage and images into timeless art.</p>
-            </div>
-
-            <div class="service-card">
-                <i class="fas fa-broadcast-tower service-icon"></i>
-                <h3>Live Streaming</h3>
-                <p>Seamless HD live streaming for events, concerts, and corporate productions.</p>
-            </div>
-            </div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 class="section-title">One studio, <em>four crafts.</em></h2>
+          </div>
         </div>
-    </section>
-
-    <section class="pricing-section" id="pricing" style="padding: 4rem 1rem; background-color: #f9f9f9;">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Content & Pricing</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Professional content creation tailored to your brand, lifestyle, and events — at clear and competitive rates. All prices are negotiable depending on your project needs.</p>
-
-            <div class="pricing-grid" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-            <div class="pricing-card">
-                <h3><i class="fas fa-camera"></i> Professional Photography & Lifestyle</h3>
-                <div class="pricing-items">
-                    <div class="pricing-item">Professional Portrait Photography Session – ₦50,000</div>
-                    <div class="pricing-item">Lifestyle Photography Shoot – ₦50,000</div>
-                    <div class="pricing-item">Brand Photography for Social Media – ₦70,000</div>
-                </div>
+        <div class="index" data-index>
+          <div class="index-media" aria-hidden="true">
+            <div class="index-frame">
+              <img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==);object-position:50% 25%" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-24.jpg" srcset="images/work/work-24-480.webp 480w, images/work/work-24.jpg 1041w" width="1041" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJQBUeg4WDQviwa9bfovdfEAD+qfqp7S2BFF1+hRN6dUwtScXuQFSs7YBGgJ0REeTOhLFdHbNbXoz6yUrcXXRrVuV+6q0zrOH5tryZcxcbFaAA);object-position:50% 40%" alt="Man in a white hat and tie mid-stride on a tree-lined road" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-52.jpg" srcset="images/work/work-52-640.webp 640w, images/work/work-52-1280.webp 1280w, images/work/work-52.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoPABQAPt1ep00opSOiMAgBEBuJZwCdACHgU3gryCJFmVzgAP7r3ch91+8GB6wtVM0P+jztTAdgxKkrbSKZ3Ifhk2NAAA==);object-position:50% 30%" alt="Sepia portrait of a woman in a beanie and glasses" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
+              <img src="images/work/work-23.jpg" srcset="images/work/work-23-480.webp 480w, images/work/work-23.jpg 1035w" width="1035" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoAByreckMaaJ2JgAP7c4gzyOxb3RwhJB1IqWNXboAkVs2TgKpRNgp4JKIIaDeiiFi5Vn3KKEykiQaIMuP1SYIdmynP+vLv39jdJq6TqvIh8AAAA);object-position:50% 45%" alt="Friends in streetwear talking outside a campus building" sizes="(min-width: 900px) 40vw, 90vw" data-index-img>
             </div>
-            <div class="pricing-card">
-                <h3><i class="fas fa-video"></i> Videography</h3>
-                <div class="pricing-items">
-                    <div class="pricing-item">Brand Shoot (Videos) – ₦100,000</div>
-                    <div class="pricing-item">Personal Videography – ₦60,000</div>
-                    <div class="pricing-item">Event Videography – ₦130,000</div>
-                    <div class="pricing-item">Wedding Content Videography – ₦350,000 (Travel & lodging not included)</div>
-                </div>
+            <p class="index-caption"><span>Service <b data-index-idx>01</b> / 04</span><span>Mide Shotzx</span></p>
+          </div>
+          <ol class="index-list">
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">01</span>
+            <div class="index-body">
+              <h3 class="index-title">Photography</h3>
+              <p>Portraits, lifestyle and brand photography &mdash; in the studio, outdoors or on location. Directed, lit and retouched by hand.</p>
+              <div class="index-meta"><b>From &#8358;50,000</b><span>Portraits &middot; Lifestyle &middot; Brand</span></div>
             </div>
-
-            <div class="pricing-card">
-                <h3><i class="fas fa-cut"></i> Video Editing</h3>
-                <div class="pricing-items">
-                    <div class="pricing-item">YouTube Video Editing – ₦150,000</div>
-                    <div class="pricing-item">IG & TikTok Reels – ₦50,000</div>
-                </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-45.jpg" srcset="images/work/work-45-640.webp 640w, images/work/work-45-1280.webp 1280w, images/work/work-45.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoPABQAPt1cpkyopSOiMAgBEBuJYgCdMoACO9PgK4aiWW9AAP7xYxH+9VgnnpiFZmHiY/dBrnGv227A4bt4qQqy6zD5HVVkJikFiqlzIrh7nw4mt3F7YiMpYULsnPbpbZqT5IrSfvVeA2tiFQAAAA==);object-position:50% 25%" alt="Full-length portrait of a smiling woman in gele and sequinned lace" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">02</span>
+            <div class="index-body">
+              <h3 class="index-title">Videography</h3>
+              <p>Brand films, personal reels, events and weddings, shot cinematic and cut to music so they feel like a story, not a recording.</p>
+              <div class="index-meta"><b>From &#8358;60,000</b><span>Brand &middot; Personal &middot; Events &middot; Weddings</span></div>
             </div>
-
-            <div class="pricing-card">
-                <h3><i class="fas fa-sticky-note"></i> Notes:</h3>
-                <div class="pricing-items notes">
-                    <div class="pricing-item">Events requiring travel must include transportation and accommodation.</div>
-                    <div class="pricing-item">70% upfront payment required to confirm booking.</div>
-                    <div class="pricing-item">30% balance is due upon final delivery.</div>
-                    <div class="pricing-item">All content delivered logo-free.</div>
-                </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-24.jpg" srcset="images/work/work-24-480.webp 480w, images/work/work-24.jpg 1041w" width="1041" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoQABQAPt1apkyopSOiMAgBEBuJQBUeg4WDQviwa9bfovdfEAD+qfqp7S2BFF1+hRN6dUwtScXuQFSs7YBGgJ0REeTOhLFdHbNbXoz6yUrcXXRrVuV+6q0zrOH5tryZcxcbFaAA);object-position:50% 40%" alt="Man in a white hat and tie mid-stride on a tree-lined road" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">03</span>
+            <div class="index-body">
+              <h3 class="index-title">Editing</h3>
+              <p>YouTube edits and Instagram or TikTok reels built to hold attention past the first second, with colour and sound done properly.</p>
+              <div class="index-meta"><b>From &#8358;50,000</b><span>YouTube &middot; Reels &middot; Colour</span></div>
             </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-52.jpg" srcset="images/work/work-52-640.webp 640w, images/work/work-52-1280.webp 1280w, images/work/work-52.jpg 2160w" width="2160" height="2880" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoPABQAPt1ep00opSOiMAgBEBuJZwCdACHgU3gryCJFmVzgAP7r3ch91+8GB6wtVM0P+jztTAdgxKkrbSKZ3Ifhk2NAAA==);object-position:50% 30%" alt="Sepia portrait of a woman in a beanie and glasses" sizes="90vw"></figure>
+          </li>
+          <li class="index-row" data-index-row>
+            <i class="index-line" data-index-line></i>
+            <span class="index-num">04</span>
+            <div class="index-body">
+              <h3 class="index-title">Live streaming</h3>
+              <p>Seamless HD streams for weddings, concerts and corporate events, so the people who couldn&rsquo;t come still get a front-row seat.</p>
+              <div class="index-meta"><b>Quoted per event</b><span>Weddings &middot; Concerts &middot; Corporate</span></div>
+            </div>
+            <figure class="index-fig" data-index-fig><img src="images/work/work-23.jpg" srcset="images/work/work-23-480.webp 480w, images/work/work-23.jpg 1035w" width="1035" height="1280" loading="lazy" decoding="async" class="ph" style="background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwAwCdASoQABQAPt1apkyopSOiMAgBEBuJYgCdMoAByreckMaaJ2JgAP7c4gzyOxb3RwhJB1IqWNXboAkVs2TgKpRNgp4JKIIaDeiiFi5Vn3KKEykiQaIMuP1SYIdmynP+vLv39jdJq6TqvIh8AAAA);object-position:50% 45%" alt="Friends in streetwear talking outside a campus building" sizes="90vw"></figure>
+          </li>
+          </ol>
         </div>
+      </div>
     </section>
 
-
-    <section class="footer">
-        <footer class="footer animate-on-scroll service-card">
-            <div class="footer-container" id="menu-toggle">
-                <div class="footer-logo">
-                    <h2>Mide <span class="highlight">Shotzx</span></h2>
-                    <p>Capturing moments, creating memories.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="services.html" class="active">Services</a>
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/mide_shotz?igsh=MXZ3dmpyMTg4ZGtvNA%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/mide_shotz" aria-label="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://wa.me/message/BZIN7ATY3TETP1" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/mide-shotz-734392256" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.tiktok.com/@mide_shotz?_t=ZM-8xCH3fs1uFB" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mide Shotzx. All rights reserved.</p>
-            </div>
-        </footer>
+    <section class="section" id="pricing" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Pricing</p>
+            <h2 class="section-title">Starting rates, <em>no small print.</em></h2>
+          </div>
+          <p class="lead">Every project is different, so these are where we start. Tell us what you need and we&rsquo;ll shape a package around it.</p>
+        </div>
+        <div class="price-groups">
+          <div class="price-group" data-reveal>
+            <h3>Photography</h3>
+            <p>Directed sessions with retouched, colour-graded images.</p>
+            <ul class="price-list">
+              <li><span>Portrait session<small>Studio, outdoor or on location</small></span><span class="price">&#8358;50,000</span></li>
+              <li><span>Lifestyle shoot<small>Couples, friends and family</small></span><span class="price">&#8358;50,000</span></li>
+              <li><span>Brand photography<small>Content for social media</small></span><span class="price">&#8358;70,000</span></li>
+            </ul>
+          </div>
+          <div class="price-group" data-reveal>
+            <h3>Videography</h3>
+            <p>Cinematic films, graded and cut to music.</p>
+            <ul class="price-list">
+              <li><span>Personal videography<small>Reels and birthday films</small></span><span class="price">&#8358;60,000</span></li>
+              <li><span>Brand shoot (video)<small>Product and brand content</small></span><span class="price">&#8358;100,000</span></li>
+              <li><span>Event videography<small>Parties, launches, ceremonies</small></span><span class="price">&#8358;130,000</span></li>
+              <li><span>Wedding content<small>Travel and lodging not included</small></span><span class="price">&#8358;350,000</span></li>
+            </ul>
+          </div>
+          <div class="price-group" data-reveal>
+            <h3>Editing &amp; live</h3>
+            <p>Post-production and broadcast.</p>
+            <ul class="price-list">
+              <li><span>IG &amp; TikTok reels<small>Edited from your footage</small></span><span class="price">&#8358;50,000</span></li>
+              <li><span>YouTube video editing<small>Long-form, colour and sound</small></span><span class="price">&#8358;150,000</span></li>
+              <li><span>Live streaming<small>HD streams for any event</small></span><span class="price">On request</span></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="included">
+          <li data-reveal><b>Direction</b><p>We guide every pose and expression. No awkward standing around.</p></li>
+          <li data-reveal><b>Hand editing</b><p>Every delivered frame is retouched and colour-graded by hand.</p></li>
+          <li data-reveal><b>Logo-free files</b><p>No watermarks. Your photos are ready to print and post.</p></li>
+          <li data-reveal><b>Clear terms</b><p>70% to book, 30% on delivery. No surprise fees.</p></li>
+        </ul>
+        <div class="pricing-foot" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Get a quote <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <p>Events outside Akure include transport and accommodation in the quote.</p>
+        </div>
+      </div>
     </section>
-    <script src="navbar.js"></script>
 
-    <script>
-        function setTheme(mode) {
-            if (mode === 'light') {
-                document.body.classList.add('light-mode');
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.querySelectorAll('.dark-btn').forEach(btn => btn.classList.add('active'));
-                document.querySelectorAll('.light-btn').forEach(btn => btn.classList.remove('active'));
-                localStorage.setItem('theme', 'dark');
-            }
-        }
+    <section class="section" style="padding-top:0">
+      <div class="container faq">
+        <div>
+          <p class="eyebrow">Questions</p>
+          <h2 class="section-title">Before you <em>book.</em></h2>
+        </div>
+        <div class="faq-list">
+          <details data-reveal><summary>How do I book a session?</summary><p>Send us a message through the contact page or WhatsApp with the occasion, your preferred date and the look you want. We&rsquo;ll reply with ideas and a quote. A 70% deposit confirms your date.</p></details>
+          <details data-reveal><summary>Are the prices fixed?</summary><p>The prices here are our starting rates. Every project is different, so prices are negotiable depending on what you need: tell us your plan and we&rsquo;ll shape a package around it.</p></details>
+          <details data-reveal><summary>Do you travel for shoots and events?</summary><p>Yes. We&rsquo;re based at FUTA North Gate, Akure, and travel for weddings and events. For shoots outside Akure, transport and accommodation are added to the quote.</p></details>
+          <details data-reveal><summary>How does payment work?</summary><p>70% upfront to secure the booking, and the remaining 30% when your final photos or film are delivered.</p></details>
+          <details data-reveal><summary>Will my photos have your logo on them?</summary><p>No. Everything is delivered logo-free, so you can print, post and share it however you like.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        document.querySelectorAll('.dark-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('dark'));
-        });
-        document.querySelectorAll('.light-btn').forEach(btn => {
-        btn.addEventListener('click', () => setTheme('light'));
-        });
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">Now booking</p>
+          <h2 class="footer-title">Let&rsquo;s make something <em>worth framing.</em></h2>
+        </div>
+        <div class="footer-actions" data-reveal>
+          <span class="magnet" data-magnetic><a class="btn btn-accent" href="contact-us.html">Book a session <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+          <a class="btn btn-ghost" href="https://wa.me/2348075060883" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
 
-        // On load, set theme from storage
-        window.addEventListener('DOMContentLoaded', () => {
-        const saved = localStorage.getItem('theme');
-        setTheme(saved === 'light' ? 'light' : 'dark');
-        });
+      <div class="footer-grid">
+        <div class="footer-col" data-reveal>
+          <h3>Studio</h3>
+          <p>FUTA North Gate<br>Akure, Ondo State, Nigeria</p>
+          <p style="margin-top:10px">Mon&ndash;Fri 8am&ndash;6pm<br>Sat 9am&ndash;4pm</p>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:olumidefalade250@gmail.com">olumidefalade250@gmail.com</a></li>
+            <li><a href="tel:+2348080218181">+234 808 021 8181</a></li>
+            <li><a href="https://wa.me/2348075060883" target="_blank" rel="noopener">WhatsApp +234 807 506 0883</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="gallery.html">Films</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" data-reveal>
+          <h3>Follow</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/mide_shotz" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@mide_shotzx" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.linkedin.com/in/mide-shotz-734392256" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
 
+      <p class="footer-mark" aria-hidden="true" data-type-mark>Mide <em>Shotzx</em></p>
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Animate only once
-                }
-            });
-            }, {
-            threshold: 0.2
-            });
-
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Mide Shotzx. All rights reserved.</p>
+        <p>Designed &amp; built by Ajy King</p>
+        <a class="to-top" href="#main" data-to-top>Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
