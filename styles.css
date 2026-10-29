@@ -657,6 +657,27 @@ ol, ul { padding: 0; list-style: none; }
   .rail-head .rail-count { justify-self: start; }
 }
 
+/* Running on narrow screens: the same held stage, stacked. Two frames on top take most
+   of the height the script measures (--rail-avail), the words sit underneath. */
+@media (max-width: 899px) {
+  .rail.is-railing .rail-stage { padding-top: calc(var(--nav-h) + 4px); }
+  .rail.is-railing .rail-head { gap: 6px; margin-bottom: 0; }
+  .rail.is-railing .rail-head .section-title { margin-top: 10px; font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  .rail.is-railing .rail-track { margin-top: 14px; }
+  .rail.is-railing .rail-panel { align-items: stretch; }
+  .rail.is-railing .rail-inner { display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+  .rail.is-railing .rail-figs { height: calc(var(--rail-avail, 62svh) * 0.62); gap: 10px; }
+  .rail.is-railing .rail-fig { height: 90%; }
+  .rail.is-railing .rail-text h3 { margin-top: 8px; font-size: clamp(1.5rem, 6.4vw, 2rem); }
+  .rail.is-railing .rail-text p { margin-top: 8px; font-size: 0.95rem; }
+  .rail.is-railing .rail-text .link-arrow { margin-top: 14px; }
+  .rail.is-railing .rail-num { font-size: 44vw; right: -2%; bottom: auto; top: 0; }
+  .rail.is-railing .rail-foot { padding-block: 10px 16px; }
+}
+@media (max-width: 899px) and (max-height: 740px) {
+  .rail.is-railing .rail-text p { display: none; }
+}
+
 /* ─── 11. Services index (motion-kit/recipes/index-list.js) ─────── */
 .index {
   display: grid;

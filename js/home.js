@@ -12,9 +12,10 @@ createMotion(hero, (env) => heroReel(hero, env));
 
 initSite();
 
-// Selected work: the row slides while the section holds. Phones keep the swipe row.
+// Selected work: the row slides while the section holds, on every screen size (the
+// recipe is built for it; narrow screens get a stacked stage in styles.css section 10).
 const rail = document.querySelector('[data-rail]');
-createMotion(rail, (env) => sideRail(rail, env, { step: 70 }), { when: '(min-width: 900px)' });
+createMotion(rail, (env) => sideRail(rail, env, { step: 70 }));
 
 const index = document.querySelector('[data-index]');
 createMotion(index, (env) => indexList(index, env), { when: '(min-width: 900px)' });
